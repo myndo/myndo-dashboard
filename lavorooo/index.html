@@ -92,13 +92,26 @@
             this.init();
         }
 
+        function graph_dashboard_title(graph, titleName) {
+            this.graph = graph;
+            this.title = titleName;
+            this.init_title();
+        }
+
+        graph_dashboard_title.prototype = {
+            init_title: function() {
+                this.graph.options.title.text = this.title;
+                return this.title;
+            }
+        }
+
         graphDashboard.prototype = {
             render: function(dimension, metric) {
-                let title = this.chart.options.title.text;
                 this.chart.destroy();
+                // delete this.chart;
                 this.current_dimension = dimension;
                 this.current_metric = metric;
-                this._create_doughnut(title);
+                this._create_doughnut(graph_dashboard_title(this.chart, this.chart.options.title.text));
             },
             init: function() {
                 let _this = this;
@@ -169,7 +182,7 @@
                 })
 
                 if (this.graphType == "doughnut") {
-                    return this._create_doughnut("Channel Mix");
+                    return this._create_doughnut();
                 } 
                 if (this.graphType == "linee") {
                     return this._create_graph();
@@ -178,12 +191,13 @@
                     return this._create_table();
                 }
             },
-            _create_doughnut: function(title_name) {
+            _create_doughnut: function(title_graph) {
                 let data = this.dataSources.get_data();
+                // console.log(title_graph);
                 this.chart = new CanvasJS.Chart(this.container, {
                     animationEnabled: true,
                     title: {
-                        text: title_name,
+                        text: (this.title !== undefined) ? this.title : "Channel Mix",
                         horizontalAlign: "left"
                     },
                     data: [{
@@ -196,7 +210,15 @@
                     }]
                 });
 
-                this.chart.render();
+                this.chart.render();    
+                this.title = this.create_title();
+                console.log(this.chart);
+                this.chart.title.text = (title_graph !== undefined) ? title_graph.title : "Channel Mix";
+            },
+            create_title: function() {
+                if (!this.title) {
+                    this.title = new graph_dashboard_title(this.chart, this.chart.options.title.text);
+                }
             },
             _convert_data: function(dimension, metric, data) {
                 this.dataSources.get_data();
@@ -309,6 +331,15 @@
                         { data: "Cost", title: "Cost" }
                     ]
                 });
+            },
+            destroy: function() {
+                let _this = this;
+                for (let a in _this.chart) {
+                    if (_this.chart.hasOwnProperty(a)) {
+                        _this.chart[a] = null;
+                    }
+                }
+                // _this.chart.destroy();
             }
         }
         var chart = new graphDashboard('aaa', "doughnut", dataSources, null, "Compaign", "Impression");
