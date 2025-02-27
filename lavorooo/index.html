@@ -101,7 +101,6 @@
         graph_dashboard_title.prototype = {
             init_title: function() {
                 this.graph.options.title.text = this.title;
-                return this.title;
             }
         }
 
@@ -111,7 +110,7 @@
                 // delete this.chart;
                 this.current_dimension = dimension;
                 this.current_metric = metric;
-                this._create_doughnut(graph_dashboard_title(this.chart, this.chart.options.title.text));
+                this._create_doughnut(new graph_dashboard_title(this.chart, this.chart.options.title.text));
             },
             init: function() {
                 let _this = this;
