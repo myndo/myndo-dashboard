@@ -106,11 +106,12 @@
 
         graphDashboard.prototype = {
             render: function(dimension, metric) {
+                let current_title = this.chart.options.title.text;
                 this.chart.destroy();
                 // delete this.chart;
                 this.current_dimension = dimension;
                 this.current_metric = metric;
-                this._create_doughnut(new graph_dashboard_title(this.chart, this.chart.options.title.text));
+                this._create_doughnut(current_title);
             },
             init: function() {
                 let _this = this;
@@ -196,7 +197,7 @@
                 this.chart = new CanvasJS.Chart(this.container, {
                     animationEnabled: true,
                     title: {
-                        text: (title_graph !== undefined) ? title_graph.title : "Channel Mix",
+                        text: (title_graph !== undefined) ? title_graph : "Channel Mix",
                         horizontalAlign: "left"
                     },
                     data: [{
