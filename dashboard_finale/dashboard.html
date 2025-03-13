@@ -1,4 +1,4 @@
-<div class = "single-tab active" id = "myndo-dashboard">
+<div class = "single-tab" id = "myndo-dashboard">
     <!-- Header della parte dei connector -->
     <div class="myndo-header" id="reconciliation-client-header">
         <div class="myndo-header-container">
@@ -150,10 +150,10 @@
 
         <div class = "sidebarDash" id = "optionsDesignBar">
             <div class = "upperPartSide menuBarSide">
-                <span class = "menuBar activeMenuBar">Title</span>
-                <span class = "menuBar">Graph</span>
+                <span class = "menuBar activeMenuBar" id = "menubar_for_title">Title</span>
+                <span class = "menuBar" id = "menubar_for_graph">Graph</span>
             </div>
-            <div class = "midPartSide">
+            <div class = "midPartSide" id = "upper_part">
                 <select class = "space_select_dash" id = "select_for_graph_dashboard">
                     <option value = "graph-1">Doughnut</option>
                     <option value = "graph-2">Linee</option>
@@ -223,7 +223,7 @@
                     </div>
                 </div>
             </div>
-            <div class = "bottomPartSide">
+            <div class = "bottomPartSide" id = "bottom_part">
                 <div class="color-picker-container">
                     <div class="color-styles">
                         <h3>Color Styles</h3>

@@ -35,6 +35,28 @@ window.MYNDO_DASHBOARD = {
         let menu_bar_options = document.querySelectorAll('.menuBar');
         let buttons_right = document.querySelectorAll('.menuButton');
 
+        // menubar_for_title
+        // menubar_for_graph
+
+        // upper_part
+        // bottom_part
+
+        let menubar_title = document.getElementById('menubar_for_title');
+        let menubar_graph = document.getElementById('menubar_for_graph');
+
+        let upper_part = document.getElementById('upper_part');
+        let bottom_part = document.getElementById('bottom_part');
+
+        menubar_title.addEventListener('click', function() {
+            upper_part.style.display = "flex";
+            bottom_part.style.display = "flex";
+        })
+
+        menubar_graph.addEventListener('click', function() {
+            upper_part.style.display = "none";
+            bottom_part.style.display = "flex";
+        })
+
         custom_metric.addEventListener('click', function() {
             screen_custom_metric.style.display = "block";
         })
@@ -1221,5 +1243,3 @@ window.onload = function () {
         })
     }
 }
-
-window.MYNDO_DASHBOARD.init();
