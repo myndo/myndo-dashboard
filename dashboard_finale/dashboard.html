@@ -1,0 +1,760 @@
+<div class = "single-tab active" id = "myndo-dashboard">
+    <!-- Header della parte dei connector -->
+    <div class="myndo-header" id="reconciliation-client-header">
+        <div class="myndo-header-container">
+            <div class = "header-main-box">
+                <div class="main">
+                    <div class="content">
+                      <div class="image">
+                        <svg width="56px" height="56px" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21,13.859V12a1,1,0,0,0-2,0v1H5V4h7a1,1,0,0,0,0-2H5A2,2,0,0,0,3,4v9.859L1.038,20.726A1,1,0,0,0,2,22H22a1,1,0,0,0,.962-1.274ZM3.326,20l1.428-5H19.246l1.428,5ZM22.6,4.2h-.628a.415.415,0,0,1-.38-.27l0-.005a.415.415,0,0,1,.08-.458l.444-.444a.4.4,0,0,0,0-.571l-.561-.561a.4.4,0,0,0-.571,0l-.444.444a.413.413,0,0,1-.458.079l-.006,0a.416.416,0,0,1-.269-.38V1.4a.4.4,0,0,0-.4-.4H18.6a.4.4,0,0,0-.4.4v.628a.416.416,0,0,1-.269.38l-.006,0a.413.413,0,0,1-.458-.079l-.444-.444a.4.4,0,0,0-.571,0l-.561.561a.4.4,0,0,0,0,.571l.444.444a.415.415,0,0,1,.08.458l0,.005a.415.415,0,0,1-.38.27H15.4a.4.4,0,0,0-.4.4V5.4a.4.4,0,0,0,.4.4h.628a.416.416,0,0,1,.38.269l0,.006a.415.415,0,0,1-.08.458l-.444.444a.4.4,0,0,0,0,.571l.561.561a.4.4,0,0,0,.571,0l.444-.444a.415.415,0,0,1,.458-.08l.006,0a.414.414,0,0,1,.269.38V8.6a.4.4,0,0,0,.4.4H19.4a.4.4,0,0,0,.4-.4V7.968a.414.414,0,0,1,.269-.38l.006,0a.415.415,0,0,1,.458.08l.444.444a.4.4,0,0,0,.571,0l.561-.561a.4.4,0,0,0,0-.571l-.444-.444a.415.415,0,0,1-.08-.458l0-.006a.416.416,0,0,1,.38-.269H22.6a.4.4,0,0,0,.4-.4V4.6A.4.4,0,0,0,22.6,4.2ZM19,6.2A1.2,1.2,0,1,1,20.2,5,1.2,1.2,0,0,1,19,6.2Z"></path></g></svg>
+                      </div>
+                      <div class="title">
+                        <h1>Dashboard</h1>
+                        <p>Your local data</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "upperPartDash">
+        <div class = "titleDashboardSection">
+            <div class = "clientChoose">Client: <select><option selected disabled>Choose your client</option><option>Adkaora</option></select></div>
+            <select><option selected disabled>Media</option></select>
+        </div>
+        <div class = "filterDashboardSection">
+            <table>
+                <tr class = "longRow">
+                    <td class = "flexColumn">
+                        <div class="date-container">
+                            <div class="date-picker-container">
+                              <div class="date-range-select" id="dateRangeSelect">
+                                <div class="calendar-icon">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                  </svg>
+                                </div>
+                                <div class="date-text" id="selectedDateRange">Questo mese: 1 mar 2025 – 5 mar 2025</div>
+                                <div class="arrow-icon">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                  </svg>
+                                </div>
+                              </div>
+                              
+                              <div class="date-picker" id="datePicker">
+                                <div class="date-picker-header">
+                                  <h3>Seleziona periodo</h3>
+                                </div>
+                                
+                                <div class="period-options">
+                                  <div class="period-option" data-period="today">Oggi</div>
+                                  <div class="period-option" data-period="yesterday">Ieri</div>
+                                  <div class="period-option active" data-period="thisMonth">Questo mese</div>
+                                  <div class="period-option" data-period="lastMonth">Mese scorso</div>
+                                  <div class="period-option" data-period="thisYear">Quest'anno</div>
+                                  <div class="period-option" data-period="custom">Personalizzato</div>
+                                </div>
+                                
+                                <div class="date-inputs">
+                                  <input type="date" class="date-input" id="startDate" value="2025-03-01">
+                                  <input type="date" class="date-input" id="endDate" value="2025-03-05">
+                                </div>
+                                
+                                <div class="date-picker-footer">
+                                  <button class="btn" id="cancelBtn">Annulla</button>
+                                  <button class="btn btn-primary" id="applyBtn">Applica</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </td>
+                    <td class = "buttonDash"><div class="dropdown-container">
+                        <button class="dropdown-button">
+                          Export All
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                        </button>
+                        <div class="dropdown-content">
+                          <div class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                              <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            Image
+                          </div>
+                          <div class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                              <polyline points="14 2 14 8 20 8"></polyline>
+                              <line x1="16" y1="13" x2="8" y2="13"></line>
+                              <line x1="16" y1="17" x2="8" y2="17"></line>
+                              <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Excel
+                          </div>
+                          <div class="menu-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                              <polyline points="14 2 14 8 20 8"></polyline>
+                              <line x1="16" y1="13" x2="8" y2="13"></line>
+                              <line x1="16" y1="17" x2="8" y2="17"></line>
+                              <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            PDF
+                          </div>
+                        </div>
+                      </div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class = "sectionUpperDataDashGenerate">
+        <div class = "titleDashAll">
+            <button id = "editTitleButton" class = "editPencilDash">
+                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </button>
+            <span class = "midTitleDash" id = "titleSchedule">Summary result</span>
+            <button id = "saveTitleButton">
+                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
+            </button>
+            <input type = "text" placeholder="New title" id = "newTitleInput">
+        </div>
+        <div class = "exportAndMetrics" id = "exportAllMetrics">
+            <button class = "menuButton" id = "magicWand" title = "Custom metrics">
+                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13 8.92226L7.92226 3.84453C6.79623 2.71849 4.97056 2.71849 3.84453 3.84453C2.71849 4.97056 2.71849 6.79623 3.84453 7.92226L16.0777 20.1555C17.2038 21.2815 19.0294 21.2815 20.1555 20.1555C21.2815 19.0294 21.2815 17.2038 20.1555 16.0777L17.0777 13" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path> <path d="M6 10L10 6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path> <path d="M16.1 2.30719C16.261 1.8976 16.8385 1.8976 16.9994 2.30719L17.4298 3.40247C17.479 3.52752 17.5776 3.62651 17.7022 3.67583L18.7934 4.1078C19.2015 4.26934 19.2015 4.849 18.7934 5.01054L17.7022 5.44252C17.5776 5.49184 17.479 5.59082 17.4298 5.71587L16.9995 6.81115C16.8385 7.22074 16.261 7.22074 16.1 6.81116L15.6697 5.71587C15.6205 5.59082 15.5219 5.49184 15.3973 5.44252L14.3061 5.01054C13.898 4.849 13.898 4.26934 14.3061 4.1078L15.3973 3.67583C15.5219 3.62651 15.6205 3.52752 15.6697 3.40247L16.1 2.30719Z" stroke="#fff"></path> <path d="M19.9672 9.12945C20.1281 8.71987 20.7057 8.71987 20.8666 9.12945L21.0235 9.5288C21.0727 9.65385 21.1713 9.75284 21.2959 9.80215L21.6937 9.95965C22.1018 10.1212 22.1018 10.7009 21.6937 10.8624L21.2959 11.0199C21.1713 11.0692 21.0727 11.1682 21.0235 11.2932L20.8666 11.6926C20.7057 12.1022 20.1281 12.1022 19.9672 11.6926L19.8103 11.2932C19.7611 11.1682 19.6625 11.0692 19.5379 11.0199L19.14 10.8624C18.732 10.7009 18.732 10.1212 19.14 9.95965L19.5379 9.80215C19.6625 9.75284 19.7611 9.65385 19.8103 9.5288L19.9672 9.12945Z" stroke="#fff"></path> <path d="M5.1332 15.3072C5.29414 14.8976 5.87167 14.8976 6.03261 15.3072L6.18953 15.7065C6.23867 15.8316 6.33729 15.9306 6.46188 15.9799L6.85975 16.1374C7.26783 16.2989 7.26783 16.8786 6.85975 17.0401L6.46188 17.1976C6.33729 17.2469 6.23867 17.3459 6.18953 17.471L6.03261 17.8703C5.87167 18.2799 5.29414 18.2799 5.1332 17.8703L4.97628 17.471C4.92714 17.3459 4.82852 17.2469 4.70393 17.1976L4.30606 17.0401C3.89798 16.8786 3.89798 16.2989 4.30606 16.1374L4.70393 15.9799C4.82852 15.9306 4.92714 15.8316 4.97628 15.7065L5.1332 15.3072Z" stroke="#fff"></path> </g></svg>
+            </button>
+            <button class = "menuButton" id = "saveReport" title = "Save report">
+                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#fff"></path> </g></svg>
+            </button>
+            <button class = "menuButton" id = "buttonForEdit" title = "Editor views">
+                <svg width = "25px" height = "25px" viewBox="0 0 64 64" data-name="Icon Set - Black" id="Icon_Set_-_Black" xmlns="http://www.w3.org/2000/svg" fill="#fff" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8px;}.cls-2{fill:#fffff;}</style> </defs> <g id="Slider"> <line class="cls-1" x1="10" x2="54" y1="16" y2="16"></line> <line class="cls-1" x1="10" x2="54" y1="32" y2="32"></line> <line class="cls-1" x1="10" x2="54" y1="48" y2="48"></line> <path d="M20,8a8,8,0,1,0,8,8,8,8,0,0,0-8-8Z"></path> <path d="M44,24a8,8,0,1,0,8,8,8,8,0,0,0-8-8Z"></path> <path d="M20,40a8,8,0,1,0,8,8,8,8,0,0,0-8-8Z"></path> <circle class="cls-2" cx="20" cy="16" r="3"></circle> <circle class="cls-2" cx="44" cy="32" r="3"></circle> <circle class="cls-2" cx="20" cy="48" r="3"></circle> </g> </g></svg>
+            </button>
+            <button class = "menuButton" id = "optionsDesign" title = "Design options">
+                <svg width = "25px" height = "25px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect> <path d="M42 26V40C42 41.1046 41.1046 42 40 42H8C6.89543 42 6 41.1046 6 40V8C6 6.89543 6.89543 6 8 6L22 6" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 26.7199V34H21.3172L42 13.3081L34.6951 6L14 26.7199Z" fill="#fffff" stroke="#fff" stroke-width="4" stroke-linejoin="round"></path> </g></svg>
+            </button>
+        </div>
+
+        <div class = "sidebarDash" id = "settingsDataBar">
+            <div class = "upperPartSide">
+                DA DEFINIRE
+            </div>
+        </div>
+
+        <div class = "sidebarDash" id = "optionsDesignBar">
+            <div class = "upperPartSide menuBarSide">
+                <span class = "menuBar activeMenuBar">Title</span>
+                <span class = "menuBar">Graph</span>
+            </div>
+            <div class = "midPartSide">
+                <select class = "space_select_dash" id = "select_for_graph_dashboard">
+                    <option value = "graph-1">Doughnut</option>
+                    <option value = "graph-2">Linee</option>
+                </select>
+                <div class = "title_for_graph">
+                    <span class = "">Title graph</span>
+                    <input type = "text" placeholder = "New title" id = "new_title_graph">
+                </div>
+                <span class = "">Typography</span>
+                <div class = "changeSettings">
+                    <select id = "font_for_graph_dash">
+                        <option value="Roboto">Roboto</option>
+                            <option value="Sans-Serif">Sans-Serif</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Tahoma">Tahoma</option>
+                            <option value="Trebuchet MS">Trebuchet MS</option>
+                            <option value="Poppins" selected>Poppins</option>
+                            <option value="Open Sans">Open Sans</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Palatino Linotype">Palatino Linotype</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Consolas">Consolas</option>
+                            <option value="Brush Script MT">Brush Script MT</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                    </select>
+                    <div class = "otherOptions">
+                        <select id="font_weight_for_graph_dash">
+                            <option value="300">Light</option>
+                            <option value="400" selected>Normal</option>
+                            <option value="600">Semi-Bold</option>
+                            <option value="700">Bold</option>
+                        </select>
+                        <select id="font_size_for_graph_dash">
+                            <option value="12">12px</option>
+                            <option value="14">14px</option>
+                            <option value="16" selected>16px</option>
+                            <option value="18">18px</option>
+                            <option value="20">20px</option>
+                        </select>
+                    </div>
+                    <div class = "otherOptions">
+                        <div class = "othOption">
+                            <label for = "lineHeight">Line height</label>
+                            <input type = text placeholder="AUTO" name = "lineHeight">
+                        </div>
+                        <div class = "othOption">
+                            <label for = "letterSpacing">Line height</label>
+                            <input type = text placeholder="0%" name = "letterSpacing">
+                        </div>
+                    </div>
+                    <div class = "otherOptions">
+                        <div class = "leftRightCenterAl">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 10H16M3 14H21M3 18H16M3 6H21" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            <svg width = "25px" height = "25px" fill="#000000" viewBox="0 -2.5 29 29" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="m1.334 2.666h26.665c.011 0 .024.001.037.001.737 0 1.334-.597 1.334-1.334s-.597-1.334-1.334-1.334c-.013 0-.026 0-.039.001h.002-26.665c-.72.021-1.296.61-1.296 1.333s.576 1.312 1.294 1.333h.002z"></path><path d="m4.889 5.333c-.011 0-.024-.001-.037-.001-.737 0-1.334.597-1.334 1.334s.597 1.334 1.334 1.334c.013 0 .026 0 .039-.001h-.002 19.555c.72-.021 1.296-.61 1.296-1.333s-.576-1.312-1.294-1.333h-.002z"></path><path d="m27.999 10.667h-26.665c-.72.021-1.296.61-1.296 1.333s.576 1.312 1.294 1.333h.002 26.665c.72-.021 1.296-.61 1.296-1.333s-.576-1.312-1.294-1.333z"></path><path d="m27.999 21.333h-26.665c-.72.021-1.296.61-1.296 1.333s.576 1.312 1.294 1.333h.002 26.665c.72-.021 1.296-.61 1.296-1.333s-.576-1.312-1.294-1.333z"></path><path d="m24.444 18.666c.72-.021 1.296-.61 1.296-1.333s-.576-1.312-1.294-1.333h-.002-19.555c-.72.021-1.296.61-1.296 1.333s.576 1.312 1.294 1.333h.002z"></path></g></svg>
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 10.75H10C9.80109 10.75 9.61032 10.671 9.46967 10.5303C9.32902 10.3897 9.25 10.1989 9.25 10C9.25 9.80109 9.32902 9.61032 9.46967 9.46967C9.61032 9.32902 9.80109 9.25 10 9.25H20C20.1989 9.25 20.3897 9.32902 20.5303 9.46967C20.671 9.61032 20.75 9.80109 20.75 10C20.75 10.1989 20.671 10.3897 20.5303 10.5303C20.3897 10.671 20.1989 10.75 20 10.75Z" fill="#000000"></path> <path d="M20.07 6.75H4.07001C3.8711 6.75 3.68033 6.67098 3.53968 6.53033C3.39903 6.38968 3.32001 6.19891 3.32001 6C3.32001 5.80109 3.39903 5.61032 3.53968 5.46967C3.68033 5.32902 3.8711 5.25 4.07001 5.25H20.07C20.2689 5.25 20.4597 5.32902 20.6003 5.46967C20.741 5.61032 20.82 5.80109 20.82 6C20.82 6.19891 20.741 6.38968 20.6003 6.53033C20.4597 6.67098 20.2689 6.75 20.07 6.75Z" fill="#000000"></path> <path d="M20.07 14.75H4.07001C3.8711 14.75 3.68033 14.671 3.53968 14.5303C3.39903 14.3897 3.32001 14.1989 3.32001 14C3.32001 13.8011 3.39903 13.6103 3.53968 13.4697C3.68033 13.329 3.8711 13.25 4.07001 13.25H20.07C20.2689 13.25 20.4597 13.329 20.6003 13.4697C20.741 13.6103 20.82 13.8011 20.82 14C20.82 14.1989 20.741 14.3897 20.6003 14.5303C20.4597 14.671 20.2689 14.75 20.07 14.75Z" fill="#000000"></path> <path d="M20 18.75H10C9.80109 18.75 9.61032 18.671 9.46967 18.5303C9.32902 18.3897 9.25 18.1989 9.25 18C9.25 17.8011 9.32902 17.6103 9.46967 17.4697C9.61032 17.329 9.80109 17.25 10 17.25H20C20.1989 17.25 20.3897 17.329 20.5303 17.4697C20.671 17.6103 20.75 17.8011 20.75 18C20.75 18.1989 20.671 18.3897 20.5303 18.5303C20.3897 18.671 20.1989 18.75 20 18.75Z" fill="#000000"></path> </g></svg>
+                        </div>
+                        <div class = "downUpMidAl">
+                            <svg width = "25px" height = "25px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>upper-limit</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="drop" fill="#000000" transform="translate(85.333333, 64.000000)"> <path d="M170.666667,42.6666667 L28.992,160.704 L56.32,193.493333 L149.333333,115.989333 L149.333333,384 L192,384 L192,115.989333 L284.992,193.493333 L312.32,160.704 L170.666667,42.6666667 Z M1.42108547e-14,42.6666667 L341.333333,42.6666667 L341.333333,0 L1.42108547e-14,0 L1.42108547e-14,42.6666667 Z" id="Mask"> </path> </g> </g> </g></svg>
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12.501 14.792l3.854 3.854-.707.707L13 16.705V23h-1v-6.293l-2.646 2.646-.707-.707zM8.647 6.354l3.854 3.854 3.854-3.854-.707-.707L13 8.295V2h-1v6.293L9.354 5.647zM6 13h13v-1H6z"></path><path fill="none" d="M0 0h24v24H0z"></path></g></svg>
+                            <svg width = "25px" height = "25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#000000"> <path d="M7.75 1a.75.75 0 01.75.75v7.614l2.955-3.129a.75.75 0 011.09 1.03l-4.25 4.5a.747.747 0 01-.533.235h-.024a.747.747 0 01-.51-.211l-.004-.005a.862.862 0 01-.02-.02l-4.25-4.499a.75.75 0 011.091-1.03L7 9.364V1.75A.75.75 0 017.75 1zM2.5 13.5a.75.75 0 000 1.5H13a.75.75 0 000-1.5H2.5z"></path> </g> </g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "bottomPartSide">
+                <div class="color-picker-container">
+                    <div class="color-styles">
+                        <h3>Color Styles</h3>
+                        <div class="icons">
+                            <button>⚙️</button>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="color-style-examples">
+                        <div class="color-sample" style="background: linear-gradient(135deg, #005F73, #0A9396)" title="Teal Gradient"></div>
+                        <div class="color-sample" style="background: #9B5DE5" title="Purple"></div>
+                        <div class="color-sample selected" style="background: #F15BB5" title="Pink"></div>
+                        <div class="color-sample" style="background: #E9C1F5" title="Light Purple"></div>
+                        <div class="color-sample" style="background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIj48cGF0aCBkPSJNIDAgNSBMIDEwIDE1IE0gLTUgMCBMIDUgMTAgTSA1IDAgTCAxNSAxMCIgc3Ryb2tlPSIjOUI1REU1IiBzdHJva2Utd2lkdGg9IjEuNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')" title="Pattern"></div>
+                        <div class="color-sample" style="background: radial-gradient(circle, #9B5DE5, #F15BB5)" title="Radial Gradient"></div>
+                    </div>
+                    
+                    <div class="team-colors-section">
+                        <h3>Awesome New Team Colors</h3>
+                        <div class="color-grid">
+                            <div class="color-swatch" style="background: #333333"></div>
+                            <div class="color-swatch" style="background: #4A4A4A"></div>
+                            <div class="color-swatch" style="background: #808080"></div>
+                            <div class="color-swatch" style="background: #BFBFBF"></div>
+                            <div class="color-swatch" style="background: #E6E6E6"></div>
+                            <div class="color-swatch" style="background: #FFFFFF"></div>
+                            
+                            <div class="color-swatch" style="background: #FF0000"></div>
+                            <div class="color-swatch" style="background: #FF4D4D"></div>
+                            <div class="color-swatch" style="background: #FF8080"></div>
+                            <div class="color-swatch" style="background: #009900"></div>
+                            <div class="color-swatch" style="background: #4DFF4D"></div>
+                            <div class="color-swatch" style="background: #80FF80"></div>
+                            
+                            <div class="color-swatch" style="background: #9B5DE5"></div>
+                            <div class="color-swatch" style="background: #C299FF"></div>
+                            <div class="color-swatch" style="background: #D9BFFF"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="solid-color-picker">
+                        <div class="picker-header">
+                            <h3>Solid</h3>
+                            <button class="close-button">✕</button>
+                        </div>
+                        
+                        <div class="color-area" id="colorArea">
+                            <div class="color-selector" id="colorSelector" style="left: 70%; top: 40%;"></div>
+                        </div>
+                        
+                        <div class="color-sliders">
+                            <input type="range" min="0" max="360" value="300" class="hue-slider" id="hueSlider">
+                            <input type="range" min="0" max="100" value="100" class="opacity-slider" id="opacitySlider" style="background-color: #A259FF;">
+                        </div>
+                        
+                        <div class="color-info">
+                            <div class="hex-value">
+                                <span>Hex</span>
+                                <input type="text" value="#A259FF" id="hexInput">
+                            </div>
+                            <div class="opacity-value">100%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="brand-style-guide">
+                        <div class="guide-header">
+                            <h3>2020 Refresh Brand Style Guide</h3>
+                        </div>
+                        
+                        <div class="guide-colors">
+                            <div class="guide-color" style="background: #FF5733"></div>
+                            <div class="guide-color" style="background: #FFA07A"></div>
+                            <div class="guide-color" style="background: #FFD700"></div>
+                            <div class="guide-color" style="background: #00A86B"></div>
+                            <div class="guide-color" style="background: #0000FF"></div>
+                            <div class="guide-color" style="background: #4169E1"></div>
+                            
+                            <div class="guide-color" style="background: #9B5DE5"></div>
+                            <div class="guide-color" style="background: #D8BFD8"></div>
+                            <div class="guide-color" style="background: #000000"></div>
+                            <div class="guide-color" style="background: #FFFACD"></div>
+                            <div class="guide-color" style="background: #AFEEEE"></div>
+                            <div class="guide-color" style="background: #E0FFFF"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "sidebarDash" id = "saveReportBar">
+            <div class = "upperPartSide">
+                Salva una copia di questo report
+            </div>
+            <div class = "midPartSide">
+                <label for = "nameForReport">Nome del report</label>
+                <input type = "text" name = "nameForReport" placeholder="Name">
+                <br>
+                <input type = "button" value = "Save">
+            </div>
+        </div>
+
+        <div class = "sidebarDash" id = "sideBarDash">
+            <div class = "upperPartSide">
+                Personalizza la tabella Pivot
+            </div>
+            <div class = "midPartSide">
+                <input type = "search" placeholder="Search">
+            </div>
+            <div class = "bottomPartSide">
+                <div class = "upperPartBottomPartSide">
+                    <span class = "">Metriche personalizzate</span>
+                    <button id = "createCustomMetric">+ Crea</button>
+                </div>
+                <div class = "bottomPartBottomPartSide">
+                    <span class = "">Prestazioni</span>
+                    <div class = "conteinerMetrics">
+                        <div class = "cardMetrics">
+                            <input type = "checkbox"><span class = "">Risultati</span>
+                        </div>
+                        <div class = "cardMetrics">
+                            <input type = "checkbox"><span class = "">Risultati</span>
+                        </div>
+                        <div class = "cardMetrics">
+                            <input type = "checkbox"><span class = "">Risultati</span>
+                        </div>
+                        <div class = "cardMetrics">
+                            <input type = "checkbox"><span class = "">Risultati</span>
+                        </div>
+                        <div class = "cardMetrics">
+                            <input type = "checkbox"><span class = "">Risultati</span>
+                        </div>
+                        <div class = "cardMetrics">
+                            <input type = "checkbox"><span class = "">Risultati</span>
+                        </div>
+                        <div class = "cardMetrics">
+                            <input type = "checkbox"><span class = "">Risultati</span>
+                        </div>
+                        <div class = "cardMetrics">
+                            <input type = "checkbox"><span class = "">Risultati</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "createCustomMetricContainer" id = "customContainerMetric">
+            <div class = "upperPartCustom">
+                <span class = "clientChoose">Custom metrics</span>
+                <span class = "subTitleDash">jkhgkjh kjhg jhg kjhg kjhg kjhg kjhg kjhgkjh gjh kjhg kjh</span>
+            </div>
+            <div class = "midPartCustom">
+                <select><option disabled selected>Seleziona metrica</option></select>
+                <select><option disabled selected>+</option></select>
+                <select><option disabled selected>-</option></select>
+                <select><option disabled selected>x</option></select>
+                <select><option disabled selected>/</option></select>
+                <select><option disabled selected>(</option></select>
+                <select><option disabled selected>)</option></select>
+            </div>
+            <div class = "bottomPartCustom">
+                <textarea width = "100%" height = "100px"></textarea>
+            </div>
+            <div class = "bottomsPartCustom">
+                <div class = "customDataInfo">
+                    <label for = "nameCustom">Name: </label>
+                    <input type = "text" placeholder="Name" id = "nameCustom">
+                </div>
+                <div class = "customDataInfo">
+                    <label for = "formatCustom">Format: </label>
+                    <select id = "formatCustom"><option disabled selected>Numerico (123)</option></select>
+                </div>
+                <div class = "customDataInfo">
+                    <input type = "button" value = "Save" id = "saveCustomMetric">
+                </div>
+            </div>
+        </div>
+        
+        <div class = "graphDash">
+            <div class = "beforeSideDash">
+                <div class = "contain_graph_before_side_dash" id = "containerDoughnutGraph">
+                    <div class="container-dash">
+                        <button id = "editDoughnutButton" class = "editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <button class="button-dash">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <circle cx="12" cy="5" r="1"></circle>
+                            <circle cx="12" cy="19" r="1"></circle>
+                        </svg>
+                        </button>
+                        <div class="dropdown-dash">
+                        <div class="item-dash">
+                            <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            Image
+                        </div>
+                        <div class="item-dash">
+                            <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Excel
+                        </div>
+                        <div class="item-dash">
+                            <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            PDF
+                        </div>
+                        </div>
+                    </div>
+                    <div id="chartContainerCircle" style="height: 370px; width: 100%;"></div>
+                </div>
+                <textarea placeholder="Insert here the description" class = "editPencilDash textareaContextDescription"></textarea>
+            </div>
+            <div class = "leftSideDash">
+                <div class = "filterCard">
+                    <div class = "filterCardUpperPartDash">
+                        <button class = "modifyWithSidebar editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "ctrNormalText">CTR</span>
+                    </div>
+                    <div class = "dataDash">
+                        <span class = "normalTextDash">TOTAL</span>
+                        <span class = "cashDash lightGreen">€300.000</span>
+                        <div class = "bottomDashCard">
+                            <span class = "percDash negativeDataDash">-3%</span>
+                            <span class = "normalTextDash">VS previous period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class = "filterCard">
+                    <div class = "filterCardUpperPartDash">
+                        <button class = "modifyWithSidebar editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "ctrNormalText">CTR</span>
+                    </div>
+                    <div class = "dataDash">
+                        <span class = "normalTextDash">TOTAL</span>
+                        <span class = "cashDash lightGreen">300</span>
+                        <div class = "bottomDashCard">
+                            <span class = "percDash negativeDataDash">-3%</span>
+                            <span class = "normalTextDash">VS previous period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class = "filterCard">
+                    <div class = "filterCardUpperPartDash">
+                        <button class = "modifyWithSidebar editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "ctrNormalText">CTR</span>
+                    </div>
+                    <div class = "dataDash">
+                        <span class = "normalTextDash">TOTAL</span>
+                        <span class = "cashDash darkBlue">3%</span>
+                        <div class = "bottomDashCard">
+                            <span class = "percDash negativeDataDash">-3%</span>
+                            <span class = "normalTextDash">VS previous period</span>
+                        </div>
+                    </div>
+                </div>
+                <textarea placeholder="Insert here the description" class = "editPencilDash textareaContextDescription"></textarea>
+            </div>
+            <div class = "rightSideDash">
+                <div class = "contain_graph_before_side_dash_second" id = "containerLineeGraph">
+                    <div class = "filtersDashGraph">
+                        <input class = "filterButtonDash" type = "button" value = "Days">
+                        <input class = "filterButtonDash" type = "button" value = "Weeks">
+                        <input class = "filterButtonDash activeFilterDash" type = "button" value = "Months">
+                        <input class = "filterButtonDash" type = "button" value = "Years">
+                        <button id = "editLineeButton" class = "editPencilDash normalButtonEdit">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <div class="container-dash second-container_dash">
+                            <button class="button-dash">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                            </button>
+                            <div class="dropdown-dash" id = "secondDropDash">
+                            <div class="item-dash">
+                                <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg>
+                                Image
+                            </div>
+                            <div class="item-dash">
+                                <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                                Excel
+                            </div>
+                            <div class="item-dash">
+                                <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                                PDF
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chartContainer" style="height: 355px; width: 100%;"></div>
+                </div>
+                <textarea placeholder="Insert here the description" class = "editPencilDash textareaContextDescription"></textarea>
+            </div>
+        </div>
+        <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
+        <div class = "kpisMenuMid">
+            <div class = "titleDashAll">
+                <button class = "editPencilDash" id = "editTitleButtonKpis">
+                    <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
+                <span class = "midTitleDash" id = "titleKpis">Summary result</span>
+                <button id = "saveTitleButtonKpis">
+                    <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
+                </button>
+                <input type = "text" placeholder="New title" id = "newTitleInputKpis">
+            </div>
+            <div class = "containCardKpis">
+                <div class = "filterCard">
+                    <div class = "filterCardUpperPartDash">
+                        <button class = "modifyWithSidebar editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "ctrNormalText">CTR</span>
+                    </div>
+                    <div class = "dataDash">
+                        <span class = "normalTextDash">TOTAL</span>
+                        <span class = "cashDash lightGreen">€300.000</span>
+                        <div class = "bottomDashCard">
+                            <span class = "percDash negativeDataDash">-3%</span>
+                            <span class = "normalTextDash">VS previous period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class = "filterCard">
+                    <div class = "filterCardUpperPartDash">
+                        <button class = "modifyWithSidebar editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "ctrNormalText">CTR</span>
+                    </div>
+                    <div class = "dataDash">
+                        <span class = "normalTextDash">TOTAL</span>
+                        <span class = "cashDash lightGreen">300</span>
+                        <div class = "bottomDashCard">
+                            <span class = "percDash negativeDataDash">-3%</span>
+                            <span class = "normalTextDash">VS previous period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class = "filterCard">
+                    <div class = "filterCardUpperPartDash">
+                        <button class = "modifyWithSidebar editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "ctrNormalText">CTR</span>
+                    </div>
+                    <div class = "dataDash">
+                        <span class = "normalTextDash">TOTAL</span>
+                        <span class = "cashDash darkBlue">3%</span>
+                        <div class = "bottomDashCard">
+                            <span class = "percDash negativeDataDash">-3%</span>
+                            <span class = "normalTextDash">VS previous period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class = "filterCard">
+                    <div class = "filterCardUpperPartDash">
+                        <button class = "modifyWithSidebar editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "ctrNormalText">CTR</span>
+                    </div>
+                    <div class = "dataDash">
+                        <span class = "normalTextDash">TOTAL</span>
+                        <span class = "cashDash darkBlue">3%</span>
+                        <div class = "bottomDashCard">
+                            <span class = "percDash negativeDataDash">-3%</span>
+                            <span class = "normalTextDash">VS previous period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class = "filterCard">
+                    <div class = "filterCardUpperPartDash">
+                        <button class = "modifyWithSidebar editPencilDash">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "ctrNormalText">CTR</span>
+                    </div>
+                    <div class = "dataDash">
+                        <span class = "normalTextDash">TOTAL</span>
+                        <span class = "cashDash darkBlue">3%</span>
+                        <div class = "bottomDashCard">
+                            <span class = "percDash negativeDataDash">-3%</span>
+                            <span class = "normalTextDash">VS previous period</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "tableDashSection">
+            <div class = "tableBottomPart" id = "tableBottom">
+                <div class = "kpiMenuBar kpiMenuBarNoPad">
+                    
+                    <div class = "titleDashAll">
+                        <button class = "editPencilDash" id = "editTitleButtonTable">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <span class = "midTitleDash" id = "titleTable">Summary result</span>
+                        <button id = "saveTitleButtonTable">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
+                        </button>
+                        <input type = "text" placeholder="New title" id = "newTitleInputTable">
+                    </div>
+                    <div class = "searchTableDash upper10" id = "tableBotShowFilt">
+
+                    </div>
+                    <div class = "searchTableDash" id = "tableBottomPart">
+                        <div class="container-dash second-container_dash">
+                            <button class="button-dash">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                              </svg>
+                            </button>
+                            <div class="dropdown-dash" id = "secondDropDash">
+                              <div class="item-dash">
+                                <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                  <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg>
+                                Image
+                              </div>
+                              <div class="item-dash">
+                                <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                  <polyline points="14 2 14 8 20 8"></polyline>
+                                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                                  <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                                Excel
+                              </div>
+                              <div class="item-dash">
+                                <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                  <polyline points="14 2 14 8 20 8"></polyline>
+                                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                                  <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                                PDF
+                              </div>
+                            </div>
+                        </div>
+                        <div id="select_column_from_table">
+                            <div class="name_of_filter_datatable" id = "toggle_filter_column_dash">Select column</div>
+                            <div class="menu_filter_datatable_dash" id = "datatable_column_view_dash">
+                                <div class="filter_check_table_dash">
+                                    <input type="checkbox" class="toggle-column" data-column="0" checked>
+                                    <span class="text_of_select_dashboard">Channel type</span>
+                                </div>
+                                <div class="filter_check_table_dash">
+                                    <input type="checkbox" class="toggle-column" data-column="1" checked>
+                                    <span class="text_of_select_dashboard">Investment</span>
+                                </div>
+                                <div class="filter_check_table_dash">
+                                    <input type="checkbox" class="toggle-column" data-column="2" checked>
+                                    <span class="text_of_select_dashboard">Click</span>
+                                </div>
+                                <div class="filter_check_table_dash">
+                                    <input type="checkbox" class="toggle-column" data-column="3" checked>
+                                    <span class="text_of_select_dashboard">Impression</span>
+                                </div>
+                                <div class="filter_check_table_dash">
+                                    <input type="checkbox" class="toggle-column" data-column="4" checked>
+                                    <span class="text_of_select_dashboard">Views</span>
+                                </div>
+                                <div class="filter_check_table_dash">
+                                    <input type="checkbox" class="toggle-column" data-column="5" checked>
+                                    <span class="text_of_select_dashboard">Conversion</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table id = "dataTableDash">
+                    <thead>
+                        <tr class = "titlesTableDash">
+                            <th>Channel type</th>
+                            <th>Investment</th>
+                            <th>Click</th>
+                            <th>Impression</th>
+                            <th>Views</th>
+                            <th>Conversion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

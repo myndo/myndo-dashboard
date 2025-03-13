@@ -1,0 +1,1759 @@
+#myndo-dashboard  .header-main-box{
+    background: linear-gradient(90deg, #0097B2 0%, var(--myndo-color-4) 100%);
+    box-shadow: 16px 0px 21.8px -5px rgba(0, 0, 0, 0.02);
+}
+
+.total-row {
+    font-weight: 600;
+    font-size: 16px !important;
+}
+
+.space_select_dash {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #c1c1c1;
+}
+
+.title_for_graph {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+}
+
+.title_for_graph > input {
+    width: 100% !important;
+    padding: 5px !important;
+    font-size: 14px !important;
+    border: 1px solid #c1c1c1 !important;
+    border-radius: 4px !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    background: white !important;
+    color: rgb(15, 15, 15) !important;
+}
+
+#select_column_from_table {
+    position: relative;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+    max-height: 35px;
+    font-family: Arial, sans-serif;
+}
+
+.name_of_filter_datatable {
+    font-weight: 500;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #72747f;
+    padding: 8px;
+    font-size: 14px !important;
+    max-height: 35px;
+    border-radius: 4px;
+}
+
+.menu_filter_datatable_dash {
+    position: absolute;
+    border-radius: 4px;
+    display: none;
+    top: 35px;
+    border: 1px solid #c1c1c1;
+    z-index: 1001;
+    padding: 10px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.596);
+    right: 0;
+    background: white;
+    width: 200px;
+    max-height: 200px;
+    font-size: 14px !important;
+    overflow-y: auto;
+}
+
+.filter_check_table_dash {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.filter_check_table_dash input {
+    margin-right: 10px;
+}
+
+.filter_check_table_dash:hover {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+#dataTableDash_filter label::before {
+    content: none;
+}
+
+.container-dash second-container_dash > button {
+    min-height: 35px;
+    max-height: 35px;
+}
+
+.titlesTableDash > th {
+    font-size: 16px;
+}
+
+.container-dash > button {
+    min-height: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    max-width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.normalButtonEdit {
+    min-height: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    max-width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.searchTableDash {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    padding-bottom: 10px;
+    gap: 15px;
+}
+
+.textareaContextDescription {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #c1c1c1;
+    font-size: 14px;
+    resize: none;
+    min-height: 100px;
+    max-height: 100px; 
+    color: rgb(15, 15, 15);
+}
+
+.searchTableDash select {
+    padding: 5.5px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #c1c1c1;
+    outline: none;
+    color: #72747f !important;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+#dataTableDash_filter > label > input {
+    background: white;
+    border-radius: 4px;
+    color: rgb(15, 15, 15);
+    font-size: 14px;
+    padding-bottom: -80px;
+    outline: none;
+}
+
+.Filter_for_table_dash > label {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editPencilDash {
+    display: none;
+}
+
+#buttonForEdit {
+    background: #0097B2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container-dash {
+position: absolute;
+width: 100%;
+display: flex !important;
+justify-content: flex-end;
+align-items: center;
+border-bottom: 1px solid #c1c1c1;
+padding-bottom: 10px;
+padding-right: 10px;
+z-index: 1003;
+top: 10px;
+left: 0;
+gap: 10px;
+display: inline-block;
+}
+
+.second-container_dash {
+    position: relative !important;
+    margin-top: 0px !important;
+    max-width: 30px !important;
+    border-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    padding-right: 0px !important;
+    top: 0px;
+    z-index: 1000 !important;
+}
+
+.button-dash {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 8px;
+cursor: pointer;
+color: #333;
+}
+
+.menuButton {
+    transition: 0.4s;
+}
+
+.menuButton:hover {
+    background: #005d6d;
+}
+
+.dropdown-dash {
+position: absolute;
+display: none;
+top: 100%;
+right: 0px;
+background-color: white;
+min-width: 120px;
+max-width: 120px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+border-radius: 4px;
+z-index: 1;
+margin-top: 4px;
+}
+
+.item-dash {
+padding: 10px 12px;
+display: flex;
+align-items: center;
+cursor: pointer;
+color: #333;
+font-size: 14px;
+}
+
+.item-dash:hover {
+background-color: #f5f5f5;
+}
+
+.icon-dash {
+width: 16px;
+height: 16px;
+margin-right: 10px;
+}
+
+.export-dash {
+background-color: #00d1b2;
+color: white;
+border: none;
+border-radius: 4px;
+padding: 8px 20px;
+font-size: 14px;
+cursor: pointer;
+margin-left: 10px;
+}
+
+.canvasjs-chart-credit {
+    display: none;
+}
+
+#exportAllMetrics {
+    position: fixed;
+    right: 10px;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    flex-direction: column;
+    z-index: 1002;
+}
+
+.dropdown-container {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-button {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #0097B2;
+border: 1px solid #0097B2;
+border-radius: 4px;
+padding: 8px 12px;
+cursor: pointer;
+min-width: 100px;
+color: #fff;
+font-size: 14px;
+}
+
+.dropdown-button svg {
+margin-left: 6px;
+}
+
+.dropdown-content {
+position: absolute;
+top: 100%;
+left: 0;
+background-color: white;
+min-width: 120px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+border-radius: 4px;
+z-index: 1001;
+margin-top: 4px;
+}
+
+.menu-item {
+padding: 10px 12px;
+display: flex;
+align-items: center;
+cursor: pointer;
+color: #333;
+font-size: 14px;
+}
+
+.menu-item:hover {
+background-color: #f5f5f5;
+}
+
+.menu-item img, .menu-item svg {
+width: 16px;
+height: 16px;
+margin-right: 10px;
+}
+
+.date-container {
+width: auto;
+}
+
+.date-range-select {
+display: flex;
+align-items: center;
+background-color: white;
+border: 1px solid #ddd;
+border-radius: 4px;
+padding: 8px 12px;
+cursor: pointer;
+user-select: none;
+box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+width: 100%;
+font-size: 14px;
+}
+
+.calendar-icon {
+margin-right: 10px;
+color: #666;
+}
+
+.date-text {
+flex-grow: 1;
+color: #333;
+font-weight: 500;
+}
+
+.arrow-icon {
+margin-left: 8px;
+color: #666;
+}
+
+.date-range-select:hover {
+border-color: #bbb;
+background-color: #fafafa;
+}
+
+.date-picker-container {
+position: relative;
+width: 100%;
+}
+
+.date-picker {
+position: absolute;
+top: 100%;
+left: 0;
+right: 0;
+z-index: 1001;
+font-size: 16px;
+margin-top: 8px;
+background-color: white;
+border: 1px solid #ddd;
+border-radius: 4px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+padding: 16px;
+display: none;
+z-index: 1001;
+}
+
+.date-picker.activeDatePicker {
+display: block;
+}
+
+.date-picker-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 12px;
+font-size: 16px;
+}
+
+.date-picker-header h3 {
+    font-size: 16px;
+}
+
+.period-options {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 8px;
+margin-bottom: 16px;
+font-size: 14px;
+}
+
+.period-option {
+padding: 4px;
+text-align: center;
+border: 1px solid #ddd;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.period-option:hover {
+background-color: #f5f5f5;
+}
+
+.period-option.activeDatePicker {
+background-color: #e6f7ff;
+border-color: #1890ff;
+color: #1890ff;
+}
+
+.date-inputs {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+margin-bottom: 16px;
+}
+
+.date-input {
+width: 100%;
+min-width: 100px;
+padding: 4px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 14px;
+}
+
+.date-picker-footer {
+display: flex;
+justify-content: flex-end;
+gap: 8px;
+}
+
+.btn {
+padding: 8px 16px;
+border: 1px solid #ddd;
+border-radius: 4px;
+background-color: white;
+cursor: pointer;
+}
+
+.btn-primary {
+background-color: #1890ff;
+color: white;
+border-color: #1890ff;
+}
+
+.btn:hover {
+opacity: 0.9;
+}
+
+.color-picker-container {
+    width: 300px;
+    background-color: white;
+    overflow: hidden;
+    border-bottom: none !important;
+}
+
+.color-styles {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.color-styles h3 {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.color-styles .icons {
+    display: flex;
+    gap: 10px;
+}
+
+.color-styles .icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modifyWithSidebar {
+    background: none;
+    display: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ctrNormalText {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.filterCardUpperPartDash {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding-top: 8.5px;
+    padding-left: 9.5px;
+}
+
+.color-style-examples {
+    display: flex;
+    padding: 10px 15px;
+    gap: 8px;
+    border-bottom: 1px solid #eee;
+    overflow-x: auto;
+}
+
+.color-sample {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.color-sample:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-sample.selected::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 2px solid #555;
+    border-radius: 50%;
+}
+
+.team-colors-section {
+    padding: 15px;
+}
+
+#secondDropDash {
+    left: -70px !important;
+}
+
+.team-colors-section h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.solid-color-picker {
+    padding: 15px;
+    position: relative;
+}
+
+.picker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.picker-header h3 {
+    font-size: 14px;
+    color: #333;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.color-area {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to bottom, transparent, black), 
+                    linear-gradient(to right, white, rgba(255,0,255,1));
+    position: relative;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.color-selector {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.color-sliders {
+    margin-bottom: 15px;
+}
+
+.hue-slider, .opacity-slider {
+    width: 100%;
+    height: 12px;
+    margin-bottom: 8px;
+    appearance: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hue-slider {
+    background: linear-gradient(to right, 
+        red, orange, yellow, green, cyan, blue, violet, magenta, red) !important;
+}
+
+.opacity-slider {
+    background: linear-gradient(to right, transparent, currentColor);
+    border: 1px solid #ddd;
+}
+
+.hue-slider::-webkit-slider-thumb, .opacity-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+.color-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hex-value {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.hex-value span {
+    font-size: 12px;
+    color: #666;
+    margin-right: 5px;
+}
+
+.hex-value input {
+    border: none !important;
+    background: none !important;
+    font-size: 14px !important;
+    color: #333 !important;
+    outline: none;
+    width: auto;
+    background: none !important;
+}
+
+.opacity-value {
+    font-size: 14px;
+    color: #333;
+}
+
+.brand-style-guide {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.guide-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.guide-header h3 {
+    font-size: 14px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.guide-colors {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+.guide-color {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.guide-color:hover {
+    transform: scale(1.1);
+}
+
+.changeSettings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.changeSettings select,
+.changeSettings input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #c1c1c1 !important;
+    background: none !important;
+    border-radius: 4px;
+    color: black !important;
+    font-size: 14px;
+}
+
+.otherOptions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.othOption {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.othOption label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.leftRightCenterAl,
+.downUpMidAl {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftRightCenterAl svg,
+.downUpMidAl svg {
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 5px;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+.leftRightCenterAl svg:hover,
+.downUpMidAl svg:hover {
+    background-color: #ddd;
+    border: 1px solid #aaa;
+}
+
+.menuBarSide {
+    display: flex !important;
+    gap: 10px !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    border-bottom: 1px solid #c1c1c1;
+    min-width: 200px;
+    width: 100%;
+}
+.menuBar {
+    color: #c1c1c1;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: none;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+
+.activeMenuBar {
+    color: black;
+    border-bottom: 2px solid #0097B2;
+}
+
+#start_date {
+    border: 1px solid #c1c1c1;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-right: none;
+    padding: 5px;
+    margin-right: -10px;
+}
+
+#end_date {
+    border: 1px solid #c1c1c1;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: none;
+    padding: 5px;
+}
+
+.flexColumn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.longRow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.createCustomMetricContainer {
+    position: fixed;
+    top: 25%;
+    left: 45%;
+    padding: 20px;
+    width: 502px;
+    background: white;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.596);
+    z-index: 1002;
+    display: none;
+}
+
+.midPartCustom select {
+    background: none;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #c1c1c1;
+}
+
+#nameCustom {
+    width: 245px !important;
+    min-width: 245px !important;
+    max-width: 245px !important;
+}
+
+.createCustomMetricContainer > div {
+    width: 100%;
+    min-width: none !important;
+    max-width: none !important;
+    margin-bottom: 10px;
+}
+
+.customDataInfo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.customDataInfo > select {
+    background: none !important;
+    border: 1px solid #c1c1c1 !important;
+    border-radius: 6px;
+    padding: 5px !important;
+    height: 30px !important;
+    min-width: 100px !important;
+    max-width: 100px !important;
+}
+
+.customDataInfo > input {
+    background: none !important;
+    border: 1px solid #c1c1c1 !important;
+    border-radius: 6px;
+    padding: 5px !important;
+    height: 30px !important;
+    min-width: 100px !important;
+    max-width: 100px !important;
+    color: black !important;
+}
+
+.bottomsPartCustom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.upperPartCustom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.bottomPartCustom textarea {
+    min-width: 100%;
+    max-width: 100%;
+    height: 200px !important;
+}
+
+.sidebarDash {
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.596);
+    position: fixed;
+    bottom:0;
+    right:0;
+    min-width: 0px;
+    max-width: 0px;
+    height: 71.95vh;
+    padding: 0px;
+    background: white;
+    z-index: 1003;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+    overflow-y: scroll;
+    transition: 0.4s;
+}
+
+.midPartSide {
+    min-width: 100%;
+}
+
+.midPartSide > input {
+    width: 100% !important;
+    padding: 5px !important;
+    border-radius: 6px !important;
+    background: white !important;
+    border: 1px solid #c1c1c1 !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    color: black !important;
+}
+
+.bottomPartSide {
+    width: 100%;
+}
+
+.upperPartBottomPartSide {
+    width: 100%;
+}
+
+.upperPartBottomPartSide > button {
+    width: 100%;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding: 5px;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #c1c1c1;
+}
+
+.cardMetrics > input {
+    margin-right: 5px;
+}
+
+.sidebarDash input {
+    min-width: auto !important;
+    max-width: auto !important;
+}
+
+.sidebarDash > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.bottomPartSide > div {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.containCardKpis {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.containCardKpis > div {
+    width: calc(100% / 5.1);
+}
+
+.kpisMenuMid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+    margin-right: 60px;
+    padding: 10px;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.titleDashAll {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#editTitleButtonKpis {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    cursor: pointer;
+    border: none;
+}
+
+.menuButton {
+    border: none;
+    padding: 5px;
+    background: #0097B2;
+    border-radius: 6px;
+}
+
+#saveTitleButtonKpis {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    cursor: pointer;
+    border: none;
+}
+
+#newTitleInputKpis {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    border: 1px solid #c1c1c1 !important;
+}
+
+#editTitleButton {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    cursor: pointer;
+    border: none;
+}
+
+#saveTitleButton {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    cursor: pointer;
+    border: none;
+}
+
+#newTitleInput {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    border: 1px solid #c1c1c1 !important;
+}
+
+#editTitleButtonTable {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    cursor: pointer;
+    border: none;
+}
+
+#saveTitleButtonTable {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    cursor: pointer;
+    border: none;
+}
+
+#newTitleInputTable {
+    display: none;
+    background: none !important;
+    color: #000 !important;
+    border: 1px solid #c1c1c1 !important;
+}
+
+.filterButtonDash {
+    padding-right: 15px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+    text-align: center;
+    width: 70px;
+}
+
+.activeFilterDash {
+    color: black;
+    text-decoration: underline #0097B2;
+}
+
+.lightGreen {
+    color: #07c8c0;
+}
+
+.darkBlue {
+    color: #045c6a;
+}
+
+.addNewKpi {
+    border: 1px dashed #c1c1c1;
+    border-radius: 6px;
+}
+
+.bottomPartKpis {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bottomPartKpis div {
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+}
+
+.customMenu {
+    border: 1px solid #c1c1c1;
+    cursor: pointer;
+}
+
+.saveMenu {
+    margin: 5px;
+    width: 70px;
+    background: #0097B2;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 26px;
+}
+
+.leftMenu {
+    border-top-left-radius: 26px;
+    border-bottom-left-radius: 26px;
+}
+
+.rightMenu {
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+}
+
+.leftPartKpis {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.leftPartKpis .clientChoose {
+    color: rgb(15, 15, 15) !important;
+}
+
+.upperPartKpis {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #c1c1c1;
+    margin-left: -20px;
+}
+
+.closeMetric {
+    color: red;
+    width: 100%;
+    text-align: right;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.customMetricContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.customMetric {
+    position: fixed;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.671);
+    padding: 20px;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.customMetric table tbody tr td {
+    padding: 5px;
+}
+
+.customMetric table tbody tr td * {
+    width: 100px;
+}
+
+.sectionUpperDataDashGenerate{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.midTitleDash {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(119, 119, 119);
+}
+
+.upper10 {
+    margin-bottom: 20px;
+}
+
+#dataTableDash_length > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+#dataTableDash_length > label > select {
+    min-width: 50px;
+}
+
+#dataTableDash_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.menuBarDash {
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
+}
+
+.tableBottomPart table {
+    width: 100%;
+}
+
+#dataTableDash tbody tr td {
+    padding: 10px;
+    border: 1px solid #c1c1c1;
+    text-align: center;
+}
+
+.tableBottomPart table thead tr.titlesTableDash th {
+    background: #0097B2;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    border: 1px solid #c1c1c1;
+    text-align: center;
+}
+
+.tableBottomPart {
+    width: 100%;
+}
+
+.tableUpperPart {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+table.dataTable {
+    width: 100% !important;
+}
+
+.dataTables_filter {
+    margin-right: -5px !important;
+}
+
+.tableDashSection {
+    border-radius: 6px;
+    display: flex;
+    margin: 20px;
+    margin-right: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.kpiMenuBarNoPad {
+    padding-left: 0px !important;
+}
+
+.kpiMenuBar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #c1c1c1;
+    max-height: auto;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.containerMenuBarDash {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.activeCardDash {
+    border: 2px solid #0097B2;
+    color: rgb(15, 15, 15);
+}
+
+.strangeActiveCardDash {
+    border-bottom: 2px solid #0097B2;
+    color: rgb(15, 15, 15);
+}
+
+.kpiCardDash {
+    width: calc(100% / 6.3);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 10px;
+    border-right: 1px solid #c1c1c1;
+}
+
+.kpiDataDash {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #c1c1c1;
+    border-radius: 6px;
+}
+
+.kpisSectionDash {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    background: white;
+    border-radius: 6px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.normalTextDash {
+    font-size: 12px;
+    color: #c1c1c1;
+}
+
+.text_of_select_dashboard {
+    font-size: 12px !important;
+    color: rgb(15, 15, 15);
+    font-weight: 400;
+}
+
+.percDash {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.positiveDataDash {
+    color: lightgreen;
+}
+
+.negativeDataDash {
+    color: red;
+}
+
+.dataDash {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 5.3px;
+    padding-left: 9.5px;
+    border-top: 1px solid #c1c1c1;
+}
+
+.cashDash {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.filterCard {
+    width: 100%;
+    max-height: 124.5px;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.filterCard select {
+    background: none;
+    outline: none;
+    border: none;
+    color: #0097B2;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.rightSideDash {
+    position: relative;
+    min-width: 53%;
+    max-width: 53%;
+    width: 55%;
+    border-radius: 4px;
+}
+
+.contain_graph_before_side_dash_second {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    min-height: 393px;
+    max-height: 394px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.leftSideDash {
+    min-width: 17%;
+    max-width: 17%;
+    max-height: 394px;
+    min-height: 393px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 6px;
+}
+
+.textDash {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.filterDash {
+    padding: 5px;
+}
+
+.buttonDash input {
+    padding: 5px;
+    border-radius: 6px;
+    min-width: 150px;
+    max-width: 150px;
+    background: #0097B2;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+}
+
+#exportDropdown {
+    padding: 5px;
+    border-radius: 6px;
+    min-width: 150px;
+    max-width: 150px;
+    background: #0097B2;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+}
+
+.filterDash select {
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.subTitleDash {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.clientChoose {
+    Font-size: 24px;
+    font-weight: 500;
+    color: rgb(15, 15, 15);
+}
+
+.clientChoose select {
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(15, 15, 15) !important;
+}
+
+select > option {
+    font-size: 14px !important;
+}
+
+.titleDashboardSection select {
+    background: none;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color:rgb(119, 119, 119);
+}
+
+.clientChoose select option {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.graphDash {
+    margin: 10px;
+    margin-top: -20px;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    margin-right: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.beforeSideDash {
+    position: relative;
+    min-width: 30%;
+    max-width: 30%;
+    width: 30%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contain_graph_before_side_dash {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    min-height: 393px;
+    max-height: 394px;
+    background: white;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.filtersDashGraph {
+    position: absolute;
+    top: 10;
+    left: 0;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #c1c1c1;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.filtersDashGraph svg {
+    cursor: pointer;
+}
+
+.selectGraphFilter {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #c1c1c1;
+    z-index: 100;
+}
+
+.dashboardOpenNavbar {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.customDash {
+    /* background: #0097B2; */
+    background: none;
+    padding: 15px;
+    padding-bottom: 2px;
+    padding-top: 10px;
+    width: 150px;
+    text-align: center;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    border: 1px solid #c1c1c1;
+    border-bottom: none;
+    /* color: white; */
+    color: #c1c1c1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.upperPartDash {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.titleDashboardSection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+tr.odd td {
+    background: white;
+    font-size: 14px;
+}
+
+tr.even td {
+    background: white;
+    font-size: 14px;
+}
