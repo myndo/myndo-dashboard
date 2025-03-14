@@ -118,14 +118,16 @@
 
     <div class = "sectionUpperDataDashGenerate">
         <div class = "titleDashAll">
-            <button id = "editTitleButton" class = "editPencilDash">
-                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-            </button>
-            <span class = "midTitleDash" id = "titleSchedule">Summary result</span>
-            <button id = "saveTitleButton">
-                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
-            </button>
-            <input type = "text" placeholder="New title" id = "newTitleInput">
+            <div class = "editPartButtonText">
+                <button id = "editTitleButton" class = "editPencilDash">
+                    <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
+                <span class = "midTitleDash" id = "titleSchedule">Summary result</span>
+                <button id = "saveTitleButton">
+                    <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
+                </button>
+                <input type = "text" placeholder="New title" id = "newTitleInput">
+            </div>
         </div>
         <div class = "exportAndMetrics" id = "exportAllMetrics">
             <button class = "menuButton" id = "magicWand" title = "Custom metrics">
@@ -139,6 +141,9 @@
             </button>
             <button class = "menuButton" id = "optionsDesign" title = "Design options">
                 <svg width = "25px" height = "25px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect> <path d="M42 26V40C42 41.1046 41.1046 42 40 42H8C6.89543 42 6 41.1046 6 40V8C6 6.89543 6.89543 6 8 6L22 6" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 26.7199V34H21.3172L42 13.3081L34.6951 6L14 26.7199Z" fill="#fffff" stroke="#fff" stroke-width="4" stroke-linejoin="round"></path> </g></svg>
+            </button>
+            <button class = "menuButton" id = "tabellaEdit" title = "Table options">
+                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 9L20 9M8 9V20M6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.0799 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.07989 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
             </button>
         </div>
 
@@ -224,6 +229,26 @@
                 </div>
             </div>
             <div class = "bottomPartSide" id = "bottom_part">
+                <div class = "specifiche_garfico" id = "ciambella_grafico">
+                    <div class = "upper_part_specifiche_grafico">
+                        <span>Specifiche</span>
+                    </div>
+                    <div class = "specifiche_grafico_def_select">
+                        <select><option disabled selected>Opzione 1</option></select>
+                        <select><option disabled selected>Opzione 2</option></select>
+                    </div>
+                </div>
+                <div class = "specifiche_garfico" id = "trend_grafico">
+                    <div class = "upper_part_specifiche_grafico">
+                        <span>Specifiche</span>
+                    </div>
+                    <div class = "specifiche_grafico_def_select">
+                        <select><option disabled selected>Opzione 1</option></select>
+                        <select><option disabled selected>Opzione 2</option></select>
+                        <select><option disabled selected>Opzione 3</option></select>
+                        <select><option disabled selected>Opzione 4</option></select>
+                    </div>
+                </div>
                 <div class="color-picker-container">
                     <div class="color-styles">
                         <h3>Color Styles</h3>
@@ -314,6 +339,39 @@
             </div>
         </div>
 
+        
+        <div class = "sidebarDash" id = "tabledit">
+            <div id="select_column_from_table">
+                <div class="name_of_filter_datatable" id = "toggle_filter_column_dash">Select column</div>
+                <div class="menu_filter_datatable_dash" id = "datatable_column_view_dash">
+                    <div class="filter_check_table_dash">
+                        <input type="checkbox" class="toggle-column" data-column="0" checked>
+                        <span class="text_of_select_dashboard">Channel type</span>
+                    </div>
+                    <div class="filter_check_table_dash">
+                        <input type="checkbox" class="toggle-column" data-column="1" checked>
+                        <span class="text_of_select_dashboard">Investment</span>
+                    </div>
+                    <div class="filter_check_table_dash">
+                        <input type="checkbox" class="toggle-column" data-column="2" checked>
+                        <span class="text_of_select_dashboard">Click</span>
+                    </div>
+                    <div class="filter_check_table_dash">
+                        <input type="checkbox" class="toggle-column" data-column="3" checked>
+                        <span class="text_of_select_dashboard">Impression</span>
+                    </div>
+                    <div class="filter_check_table_dash">
+                        <input type="checkbox" class="toggle-column" data-column="4" checked>
+                        <span class="text_of_select_dashboard">Views</span>
+                    </div>
+                    <div class="filter_check_table_dash">
+                        <input type="checkbox" class="toggle-column" data-column="5" checked>
+                        <span class="text_of_select_dashboard">Conversion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class = "sidebarDash" id = "saveReportBar">
             <div class = "upperPartSide">
                 Salva una copia di questo report
@@ -342,28 +400,28 @@
                     <span class = "">Prestazioni</span>
                     <div class = "conteinerMetrics">
                         <div class = "cardMetrics">
-                            <input type = "checkbox"><span class = "">Risultati</span>
+                            <input type = "checkbox"><span class = "metric_spef_dash">Risultati <span class = "numberMagic">1</span></span>
                         </div>
                         <div class = "cardMetrics">
-                            <input type = "checkbox"><span class = "">Risultati</span>
+                            <input type = "checkbox"><span class = "metric_spef_dash">Risultati <span class = "numberMagic">1</span></span>
                         </div>
                         <div class = "cardMetrics">
-                            <input type = "checkbox"><span class = "">Risultati</span>
+                            <input type = "checkbox"><span class = "metric_spef_dash">Risultati <span class = "numberMagic">1</span></span>
                         </div>
                         <div class = "cardMetrics">
-                            <input type = "checkbox"><span class = "">Risultati</span>
+                            <input type = "checkbox"><span class = "metric_spef_dash">Risultati <span class = "numberMagic">1</span></span>
                         </div>
                         <div class = "cardMetrics">
-                            <input type = "checkbox"><span class = "">Risultati</span>
+                            <input type = "checkbox"><span class = "metric_spef_dash">Risultati <span class = "numberMagic">1</span></span>
                         </div>
                         <div class = "cardMetrics">
-                            <input type = "checkbox"><span class = "">Risultati</span>
+                            <input type = "checkbox"><span class = "metric_spef_dash">Risultati <span class = "numberMagic">1</span></span>
                         </div>
                         <div class = "cardMetrics">
-                            <input type = "checkbox"><span class = "">Risultati</span>
+                            <input type = "checkbox"><span class = "metric_spef_dash">Risultati <span class = "numberMagic">1</span></span>
                         </div>
                         <div class = "cardMetrics">
-                            <input type = "checkbox"><span class = "">Risultati</span>
+                            <input type = "checkbox"><span class = "metric_spef_dash">Risultati <span class = "numberMagic">1</span></span>
                         </div>
                     </div>
                 </div>
@@ -453,9 +511,6 @@
             <div class = "leftSideDash">
                 <div class = "filterCard">
                     <div class = "filterCardUpperPartDash">
-                        <button class = "modifyWithSidebar editPencilDash">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
                         <span class = "ctrNormalText">CTR</span>
                     </div>
                     <div class = "dataDash">
@@ -469,9 +524,6 @@
                 </div>
                 <div class = "filterCard">
                     <div class = "filterCardUpperPartDash">
-                        <button class = "modifyWithSidebar editPencilDash">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
                         <span class = "ctrNormalText">CTR</span>
                     </div>
                     <div class = "dataDash">
@@ -485,9 +537,6 @@
                 </div>
                 <div class = "filterCard">
                     <div class = "filterCardUpperPartDash">
-                        <button class = "modifyWithSidebar editPencilDash">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
                         <span class = "ctrNormalText">CTR</span>
                     </div>
                     <div class = "dataDash">
@@ -560,21 +609,27 @@
 
         <div class = "kpisMenuMid">
             <div class = "titleDashAll">
-                <button class = "editPencilDash" id = "editTitleButtonKpis">
-                    <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                </button>
-                <span class = "midTitleDash" id = "titleKpis">Summary result</span>
-                <button id = "saveTitleButtonKpis">
-                    <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
-                </button>
-                <input type = "text" placeholder="New title" id = "newTitleInputKpis">
+                <div class = "editPartButtonText">
+                    <button class = "editPencilDash" id = "editTitleButtonKpis">
+                        <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </button>
+                    <span class = "midTitleDash" id = "titleKpis">Summary result</span>
+                    <button id = "saveTitleButtonKpis">
+                        <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
+                    </button>
+                    <input type = "text" placeholder="New title" id = "newTitleInputKpis">
+                </div>
             </div>
+            <div class = "titleSection">
+                <span class = "super_title_dashboard">Titolo</span>
+                <span class = "super_subtitle_dashboard">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, accusantium.</span>
+            </div>
+            <button class = "modifyWithSidebar editPencilDash">
+                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </button>
             <div class = "containCardKpis">
                 <div class = "filterCard">
                     <div class = "filterCardUpperPartDash">
-                        <button class = "modifyWithSidebar editPencilDash">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
                         <span class = "ctrNormalText">CTR</span>
                     </div>
                     <div class = "dataDash">
@@ -588,9 +643,6 @@
                 </div>
                 <div class = "filterCard">
                     <div class = "filterCardUpperPartDash">
-                        <button class = "modifyWithSidebar editPencilDash">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
                         <span class = "ctrNormalText">CTR</span>
                     </div>
                     <div class = "dataDash">
@@ -604,9 +656,6 @@
                 </div>
                 <div class = "filterCard">
                     <div class = "filterCardUpperPartDash">
-                        <button class = "modifyWithSidebar editPencilDash">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
                         <span class = "ctrNormalText">CTR</span>
                     </div>
                     <div class = "dataDash">
@@ -620,9 +669,6 @@
                 </div>
                 <div class = "filterCard">
                     <div class = "filterCardUpperPartDash">
-                        <button class = "modifyWithSidebar editPencilDash">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
                         <span class = "ctrNormalText">CTR</span>
                     </div>
                     <div class = "dataDash">
@@ -636,9 +682,6 @@
                 </div>
                 <div class = "filterCard">
                     <div class = "filterCardUpperPartDash">
-                        <button class = "modifyWithSidebar editPencilDash">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
                         <span class = "ctrNormalText">CTR</span>
                     </div>
                     <div class = "dataDash">
@@ -657,19 +700,28 @@
                 <div class = "kpiMenuBar kpiMenuBarNoPad">
                     
                     <div class = "titleDashAll">
-                        <button class = "editPencilDash" id = "editTitleButtonTable">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
-                        <span class = "midTitleDash" id = "titleTable">Summary result</span>
-                        <button id = "saveTitleButtonTable">
-                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
-                        </button>
-                        <input type = "text" placeholder="New title" id = "newTitleInputTable">
+                        <div class = "editPartButtonText">
+                            <button class = "editPencilDash" id = "editTitleButtonTable">
+                                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20H20.5M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6" stroke="#c1c1c1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            </button>
+                            <span class = "midTitleDash" id = "titleTable">Summary result</span>
+                            <button id = "saveTitleButtonTable">
+                                <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1716 1C18.702 1 19.2107 1.21071 19.5858 1.58579L22.4142 4.41421C22.7893 4.78929 23 5.29799 23 5.82843V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H18.1716ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21L5 21L5 15C5 13.3431 6.34315 12 8 12L16 12C17.6569 12 19 13.3431 19 15V21H20C20.5523 21 21 20.5523 21 20V6.82843C21 6.29799 20.7893 5.78929 20.4142 5.41421L18.5858 3.58579C18.2107 3.21071 17.702 3 17.1716 3H17V5C17 6.65685 15.6569 8 14 8H10C8.34315 8 7 6.65685 7 5V3H4ZM17 21V15C17 14.4477 16.5523 14 16 14L8 14C7.44772 14 7 14.4477 7 15L7 21L17 21ZM9 3H15V5C15 5.55228 14.5523 6 14 6H10C9.44772 6 9 5.55228 9 5V3Z" fill="#c1c1c1"></path> </g></svg>
+                            </button>
+                            <input type = "text" placeholder="New title" id = "newTitleInputTable">
+                        </div>
+                        <div class = "titleSection">
+                            <span class = "super_title_dashboard">Titolo</span>
+                            <span class = "super_subtitle_dashboard">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, accusantium.</span>
+                        </div>
                     </div>
                     <div class = "searchTableDash upper10" id = "tableBotShowFilt">
 
                     </div>
                     <div class = "searchTableDash" id = "tableBottomPart">
+                        <button class = "editTable">
+                            <svg width = "25px" height = "25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 9L20 9M8 9V20M6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.0799 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.07989 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20Z" stroke="#c1c1c1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
                         <div class="container-dash second-container_dash">
                             <button class="button-dash">
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -707,35 +759,6 @@
                                 </svg>
                                 PDF
                               </div>
-                            </div>
-                        </div>
-                        <div id="select_column_from_table">
-                            <div class="name_of_filter_datatable" id = "toggle_filter_column_dash">Select column</div>
-                            <div class="menu_filter_datatable_dash" id = "datatable_column_view_dash">
-                                <div class="filter_check_table_dash">
-                                    <input type="checkbox" class="toggle-column" data-column="0" checked>
-                                    <span class="text_of_select_dashboard">Channel type</span>
-                                </div>
-                                <div class="filter_check_table_dash">
-                                    <input type="checkbox" class="toggle-column" data-column="1" checked>
-                                    <span class="text_of_select_dashboard">Investment</span>
-                                </div>
-                                <div class="filter_check_table_dash">
-                                    <input type="checkbox" class="toggle-column" data-column="2" checked>
-                                    <span class="text_of_select_dashboard">Click</span>
-                                </div>
-                                <div class="filter_check_table_dash">
-                                    <input type="checkbox" class="toggle-column" data-column="3" checked>
-                                    <span class="text_of_select_dashboard">Impression</span>
-                                </div>
-                                <div class="filter_check_table_dash">
-                                    <input type="checkbox" class="toggle-column" data-column="4" checked>
-                                    <span class="text_of_select_dashboard">Views</span>
-                                </div>
-                                <div class="filter_check_table_dash">
-                                    <input type="checkbox" class="toggle-column" data-column="5" checked>
-                                    <span class="text_of_select_dashboard">Conversion</span>
-                                </div>
                             </div>
                         </div>
                     </div>

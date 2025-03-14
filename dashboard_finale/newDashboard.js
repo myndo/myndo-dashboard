@@ -1,7 +1,7 @@
 window.MYNDO_DASHBOARD = {
 
     reset_button_color : function(button) {
-        let color = "#0097B2";
+        let color = "#c1c1c1";
         button.style.backgroundColor = color;
     },
 
@@ -163,6 +163,21 @@ window.MYNDO_DASHBOARD = {
         let edit_button_title = document.getElementById('editTitleButton');
         let chart;
         let chartA;
+        let menubar_title = document.getElementById('menubar_for_title');
+        let menubar_graph = document.getElementById('menubar_for_graph');
+        let upper_part = document.getElementById('upper_part');
+        let bottom_part = document.getElementById('bottom_part');
+        let specifiche_generali = document.querySelectorAll('.specifiche_garfico');
+        let spef_ciambella = document.getElementById('ciambella_grafico');
+        let spef_trend = document.getElementById('trend_grafico');
+        let edit_table_button_pencil = document.querySelector('.editTable');
+        let tab_edit_button = document.getElementById('tabellaEdit');
+
+        function closeMenusSpef() {
+            for (let spef of specifiche_generali) {
+                spef.style.display = "none";
+            }
+        }
 
         window.onload = function () {
         let arrayA = [
@@ -443,7 +458,7 @@ window.MYNDO_DASHBOARD = {
                 button_options_design.style.marginRight = 290 + "px";
                 let closestMenuBar = e.target.closest('.menuButton');
                 if (closestMenuBar) {
-                    closestMenuBar.style.backgroundColor = "#005d6d";
+                    closestMenuBar.style.backgroundColor = "#0097B2";
                 }
                 select_graph.value = "graph-1";
                 new_title_input.value = chartA.options.title.text;
@@ -452,6 +467,9 @@ window.MYNDO_DASHBOARD = {
                 font_size_select.value = chartA.options.title.fontSize;
                 dog.style.border = "1px solid #0097B2";
                 lin.style.border = "none";
+                spef_ciambella.style.display = "none";
+                spef_trend.style.display = "none";
+                menubar_title.click();
             })
 
             lin_graph.addEventListener('click', function(e) {
@@ -461,7 +479,7 @@ window.MYNDO_DASHBOARD = {
                 button_options_design.style.marginRight = 290 + "px";
                 let closestMenuBar = e.target.closest('.menuButton');
                 if (closestMenuBar) {
-                    closestMenuBar.style.backgroundColor = "#005d6d";
+                    closestMenuBar.style.backgroundColor = "#0097B2";
                 }
                 select_graph.value = "graph-2";
                 new_title_input.value = chart.options.title.text;
@@ -470,6 +488,9 @@ window.MYNDO_DASHBOARD = {
                 font_size_select.value = chart.options.title.fontSize;
                 dog.style.border = "none";
                 lin.style.border = "1px solid #0097B2";
+                spef_ciambella.style.display = "none";
+                spef_trend.style.display = "none";
+                menubar_title.click();
             })
 
             window.addEventListener('click', function(e) {
@@ -601,34 +622,46 @@ window.MYNDO_DASHBOARD = {
         let button_settings_data = document.getElementById('settingsData');
         let screen_settings_data = document.getElementById('settingsDataBar');
         let button_options_design = document.getElementById('optionsDesign');
+        let screen_tab_edit = document.getElementById('tabledit');
         let screen_options_design = document.getElementById('optionsDesignBar');
         let menu_bar_options = document.querySelectorAll('.menuBar');
         let buttons_right = document.querySelectorAll('.menuButton');
 
-        // menubar_for_title
-        // menubar_for_graph
-
-        // upper_part
-        // bottom_part
-
-        let menubar_title = document.getElementById('menubar_for_title');
-        let menubar_graph = document.getElementById('menubar_for_graph');
-
-        let upper_part = document.getElementById('upper_part');
-        let bottom_part = document.getElementById('bottom_part');
+        edit_table_button_pencil.addEventListener('click', function() {
+            tab_edit_button.click();
+        })
 
         menubar_title.addEventListener('click', function() {
             upper_part.style.display = "flex";
             bottom_part.style.display = "flex";
+            for (let spef of specifiche_generali) {
+                spef.style.display = "none"
+            }
         })
 
         menubar_graph.addEventListener('click', function() {
             upper_part.style.display = "none";
             bottom_part.style.display = "flex";
+            if (select_graph.value == "graph-1") {
+                spef_ciambella.style.display = "flex";
+            } else {
+                spef_trend.style.display = "flex";
+            }
         })
 
         custom_metric.addEventListener('click', function() {
             screen_custom_metric.style.display = "block";
+        })
+
+        tab_edit_button.addEventListener('click', function(e) {
+            screen_tab_edit.style.minWidth = 300 + "px";
+            screen_tab_edit.style.maxWidth = 300 + "px";
+            screen_tab_edit.style.padding = 20 + "px";
+            tab_edit_button.style.marginRight = 290 + "px";
+            let closestMenuBar = e.target.closest('.menuButton');
+            if (closestMenuBar) {
+                closestMenuBar.style.backgroundColor = "#0097B2";
+            }
         })
 
         button_options_design.addEventListener('click', function(e) {
@@ -638,7 +671,7 @@ window.MYNDO_DASHBOARD = {
             button_options_design.style.marginRight = 290 + "px";
             let closestMenuBar = e.target.closest('.menuButton');
             if (closestMenuBar) {
-                closestMenuBar.style.backgroundColor = "#005d6d";
+                closestMenuBar.style.backgroundColor = "#0097B2";
             }
         })
 
@@ -653,7 +686,7 @@ window.MYNDO_DASHBOARD = {
             save_report_button.style.marginRight = 290 + "px";
             let closestMenuBar = e.target.closest('.menuButton');
             if (closestMenuBar) {
-                closestMenuBar.style.backgroundColor = "#005d6d";
+                closestMenuBar.style.backgroundColor = "#0097B2";
             }
         })
 
@@ -668,6 +701,17 @@ window.MYNDO_DASHBOARD = {
                     sidebar_metric.style.padding = 0 + "px";
                 }
                 this.MYNDO_DASHBOARD.reset_button_color(magic_wand);
+            }
+
+            
+
+            if (sidebar_save_report.style.marginRight !== 0 + "px" && !tab_edit_button.contains(e.target) && !screen_tab_edit.contains(e.target) && !edit_table_button_pencil.contains(e.target)) {
+
+                tab_edit_button.style.marginRight = 0 + "px";
+                screen_tab_edit.style.minWidth = 0 + "px";
+                screen_tab_edit.style.maxWidth = 0 + "px";
+                screen_tab_edit.style.padding = 0 + "px";
+                this.MYNDO_DASHBOARD.reset_button_color(tab_edit_button);
             }
 
             if (sidebar_save_report.style.marginRight !== 0 + "px" && !save_report_button.contains(e.target) && !sidebar_save_report.contains(e.target)) {
@@ -691,7 +735,7 @@ window.MYNDO_DASHBOARD = {
             magic_wand.style.marginRight = 290 + "px";
             let closestMenuBar = e.target.closest('.menuButton');
             if (closestMenuBar) {
-                closestMenuBar.style.backgroundColor = "#005d6d";
+                closestMenuBar.style.backgroundColor = "#0097B2";
             }
         })
 
@@ -949,7 +993,7 @@ window.MYNDO_DASHBOARD = {
                 sidebar_metric.style.minWidth = 300 + "px";
                 sidebar_metric.style.padding = 20 + "px";
                 magic_wand.style.marginRight = 290 + "px";
-                magic_wand.style.backgroundColor = "#005d6d";
+                magic_wand.style.backgroundColor = "#0097B2";
             });
         }
 
@@ -1122,9 +1166,6 @@ window.MYNDO_DASHBOARD = {
 
             let toggle_button = document.getElementById('toggle_filter_column_dash');
             let menu_filter_column = document.getElementById('datatable_column_view_dash');
-            toggle_button.addEventListener('click', function() {
-                menu_filter_column.style.display = "block";
-            })
 
             bottomPart.appendChild(searchFilter);
             showFilter.style.display = "none";
@@ -1136,12 +1177,6 @@ window.MYNDO_DASHBOARD = {
                     column.visible(this.checked); 
                 });
             });
-
-            window.addEventListener('click', function(e) {
-                if (!toggle_button.contains(e.target) && !menu_filter_column.contains(e.target)) {
-                    menu_filter_column.style.display = "none";
-                }
-            })
         })
 
         let edit_button = document.getElementById('buttonForEdit');

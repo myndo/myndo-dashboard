@@ -3,6 +3,18 @@
     box-shadow: 16px 0px 21.8px -5px rgba(0, 0, 0, 0.02);
 }
 
+.editTable {
+    height: 35px;
+    width: 35px;
+    border-radius: 4px;
+    border: 1px solid #c1c1c1;background: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+}
+
 .total-row {
     font-weight: 600;
     font-size: 16px !important;
@@ -43,10 +55,9 @@
 
 #select_column_from_table {
     position: relative;
-    width: 200px;
+    width: 100%;
     background: #fff;
-    border: 1px solid #c1c1c1;
-    border-radius: 4px;
+    border-bottom: 1px solid #c1c1c1;
     max-height: 35px;
     font-family: Arial, sans-serif;
 }
@@ -66,18 +77,45 @@
     border-radius: 4px;
 }
 
+.cardMetrics:has(input[type="checkbox"]:checked) .numberMagic {
+    display: flex;
+}
+
+.metric_spef_dash {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.numberMagic {
+    display: none;
+    border-radius: 50%;
+    background: #0097B2;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.cardMetrics{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
 .menu_filter_datatable_dash {
     position: absolute;
     border-radius: 4px;
-    display: none;
     top: 35px;
-    border: 1px solid #c1c1c1;
     z-index: 1001;
     padding: 10px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.596);
+    padding-left: 0px;
     right: 0;
-    background: white;
-    width: 200px;
+    width: 100%;
     max-height: 200px;
     font-size: 14px !important;
     overflow-y: auto;
@@ -193,7 +231,7 @@
 }
 
 #buttonForEdit {
-    background: #0097B2;
+    background: #c1c1c1;
     color: white;
     border: none;
     border-radius: 4px;
@@ -245,7 +283,36 @@ color: #333;
 }
 
 .menuButton:hover {
-    background: #005d6d;
+    background: #0097B2;
+}
+
+.specifiche_garfico {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display: none;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.specifiche_grafico_def_select {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.specifiche_grafico_def_select select {
+    background: none;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #c1c1c1;
+    font-size: 14px;
+    width: 100%;
 }
 
 .dropdown-dash {
@@ -421,6 +488,27 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 padding: 16px;
 display: none;
 z-index: 1001;
+}
+
+.titleSection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.super_title_dashboard {
+    font-size: 22px;
+    font-weight: 500;
+    color: #4f4f4f !important;
+}
+
+.super_subtitle_dashboard {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: -20px;
+    color: #4f4f4f !important;
 }
 
 .date-picker.activeDatePicker {
@@ -1069,18 +1157,27 @@ opacity: 0.9;
     flex-direction: column;
     gap: 10px;
     margin: 20px;
+    margin-top: 0px;
     margin-right: 60px;
     padding: 10px;
-    padding-bottom: 40px;
+    padding-top: 0px;
     width: 100%;
 }
 
 .titleDashAll {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.editPartButtonText {
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    padding-bottom: 10px;
     width: 100%;
 }
 
@@ -1095,7 +1192,7 @@ opacity: 0.9;
 .menuButton {
     border: none;
     padding: 5px;
-    background: #0097B2;
+    background: #c1c1c1;
     border-radius: 6px;
 }
 
@@ -1380,6 +1477,7 @@ table.dataTable {
     display: flex;
     margin: 20px;
     margin-right: 60px;
+    margin-top: 0px;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
