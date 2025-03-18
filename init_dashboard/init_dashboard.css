@@ -46,7 +46,7 @@
 .section_create_new_dashboard {
     padding-bottom: 10px;
     width: 100%;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -63,7 +63,7 @@
 }
 
 .multi_line_select_dash > select, .multi_line_select_dash input {
-    width: calc(100% / 2.1);
+    width: calc(100% / 2.03);
     padding: 5px;
     border-radius: 4px;
     outline: none;
