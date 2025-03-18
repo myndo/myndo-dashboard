@@ -10,6 +10,7 @@
     --color-white-dash: #fff;
     --box-shadow: rgba(0.1, 0.1, 0.1, 0.356);
     --delete-camp: red;
+    --table-hover-tr: rgb(226, 226, 226);
 }
 
 .display_flex_section {
@@ -159,7 +160,7 @@
 }
 
 #report_table_for_dashboard > tbody > tr:hover {
-    background: rgb(226, 226, 226);
+    background: var(--table-hover-tr);
 }
 
 .action_column_for_table {
