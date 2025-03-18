@@ -24,7 +24,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;
     border-radius: 4px;
     border: 1px solid #c1c1c1;
@@ -44,7 +44,7 @@
 .title_for_graph > input {
     width: 100% !important;
     padding: 5px !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
     border: 1px solid #c1c1c1 !important;
     border-radius: 4px !important;
     min-width: 100% !important;
@@ -72,7 +72,7 @@
     text-align: center;
     color: #72747f;
     padding: 8px;
-    font-size: 14px !important;
+    font-size: 12px !important;
     max-height: 35px;
     border-radius: 4px;
 }
@@ -96,7 +96,7 @@
     align-items: center;
     width: 20px;
     height: 20px;
-    font-size: 14px;
+    font-size: 12px;
     color: white;
 }
 
@@ -117,7 +117,7 @@
     right: 0;
     width: 100%;
     max-height: 200px;
-    font-size: 14px !important;
+    font-size: 12px !important;
     overflow-y: auto;
 }
 
@@ -191,7 +191,7 @@
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #c1c1c1;
-    font-size: 14px;
+    font-size: 12px;
     resize: none;
     min-height: 100px;
     max-height: 100px; 
@@ -201,7 +201,7 @@
 .searchTableDash select {
     padding: 5.5px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 12px;
     border: 1px solid #c1c1c1;
     outline: none;
     color: #72747f !important;
@@ -213,7 +213,7 @@
     background: white;
     border-radius: 4px;
     color: rgb(15, 15, 15);
-    font-size: 14px;
+    font-size: 12px;
     padding-bottom: -80px;
     outline: none;
 }
@@ -235,7 +235,7 @@
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
 }
 
@@ -311,7 +311,7 @@ color: #333;
     padding: 5px;
     border-radius: 4px;
     border: 1px solid #c1c1c1;
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;
 }
 
@@ -335,7 +335,7 @@ display: flex;
 align-items: center;
 cursor: pointer;
 color: #333;
-font-size: 14px;
+font-size: 12px;
 }
 
 .item-dash:hover {
@@ -354,7 +354,7 @@ color: white;
 border: none;
 border-radius: 4px;
 padding: 8px 20px;
-font-size: 14px;
+font-size: 12px;
 cursor: pointer;
 margin-left: 10px;
 }
@@ -391,7 +391,7 @@ padding: 8px 12px;
 cursor: pointer;
 min-width: 100px;
 color: #fff;
-font-size: 14px;
+font-size: 12px;
 }
 
 .dropdown-button svg {
@@ -416,7 +416,7 @@ display: flex;
 align-items: center;
 cursor: pointer;
 color: #333;
-font-size: 14px;
+font-size: 12px;
 }
 
 .menu-item:hover {
@@ -444,7 +444,7 @@ cursor: pointer;
 user-select: none;
 box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 width: 100%;
-font-size: 14px;
+font-size: 12px;
 }
 
 .calendar-icon {
@@ -532,7 +532,7 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 8px;
 margin-bottom: 16px;
-font-size: 14px;
+font-size: 12px;
 }
 
 .period-option {
@@ -566,7 +566,7 @@ min-width: 100px;
 padding: 4px;
 border: 1px solid #ddd;
 border-radius: 4px;
-font-size: 14px;
+font-size: 12px;
 }
 
 .date-picker-footer {
@@ -609,7 +609,7 @@ opacity: 0.9;
 
 .color-styles h3 {
     flex-grow: 1;
-    font-size: 14px;
+    font-size: 12px;
     color: #333;
 }
 
@@ -690,7 +690,7 @@ opacity: 0.9;
 }
 
 .team-colors-section h3 {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 15px;
     color: #333;
 }
@@ -727,7 +727,7 @@ opacity: 0.9;
 }
 
 .picker-header h3 {
-    font-size: 14px;
+    font-size: 12px;
     color: #333;
 }
 
@@ -813,7 +813,7 @@ opacity: 0.9;
 .hex-value input {
     border: none !important;
     background: none !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
     color: #333 !important;
     outline: none;
     width: auto;
@@ -821,7 +821,7 @@ opacity: 0.9;
 }
 
 .opacity-value {
-    font-size: 14px;
+    font-size: 12px;
     color: #333;
 }
 
@@ -837,7 +837,7 @@ opacity: 0.9;
 }
 
 .guide-header h3 {
-    font-size: 14px;
+    font-size: 12px;
     color: #333;
     flex-grow: 1;
 }
@@ -877,7 +877,7 @@ opacity: 0.9;
     background: none !important;
     border-radius: 4px;
     color: black !important;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .otherOptions {
@@ -1261,7 +1261,7 @@ opacity: 0.9;
     padding-right: 15px;
     background: none;
     border: none;
-    font-size: 14px;
+    font-size: 12px;
     color: #c1c1c1;
     border-right: 1px solid #c1c1c1;
     text-align: center;
@@ -1685,7 +1685,7 @@ table.dataTable {
 .filterDash select {
     padding: 5px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     min-width: 150px;
     max-width: 150px;
@@ -1712,7 +1712,7 @@ table.dataTable {
 }
 
 select > option {
-    font-size: 14px !important;
+    font-size: 12px !important;
 }
 
 .titleDashboardSection select {
@@ -1848,10 +1848,10 @@ select > option {
 
 tr.odd td {
     background: white;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 tr.even td {
     background: white;
-    font-size: 14px;
+    font-size: 12px;
 }
