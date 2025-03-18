@@ -253,7 +253,7 @@
 
 .upper_table_part_dash > select {
     padding: 5px;
-    width: 130px;
+    width: 150px;
     border-radius: 4px;
     border: 1px solid var(--color-subtitle-dash);
     color: var(--color-subtitle-dash);
@@ -293,7 +293,7 @@
 }
 
 .button_for_report_dash:hover {
-    width: 130px;
+    width: 150px;
     display: flex;
     color: var(--color-white-dash);
 }

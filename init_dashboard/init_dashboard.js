@@ -7,7 +7,7 @@ window.MYNDO_DASHBOARD_START = {
     create_new_dashboard : function(screen_generate) {
         // Serve per generare la nuova dashboard
         screen_generate.style.display = "none";
-        alert("Nuova dashboard generata correttamente!");
+        alert("New dashboard generated!");
     },
 
     close_new_dashboard : function(screen_generate) {
@@ -49,8 +49,8 @@ window.MYNDO_DASHBOARD_START = {
         let table = document.getElementById("report_table_for_dashboard");	
         let rows = table.getElementsByTagName("tr"); 
 
-        agency_filter.value = "Agenzia";
-        client_filter.value = "Cliente";
+        agency_filter.value = "Agency";
+        client_filter.value = "Client";
         brand_filter.value = "Brand";
 
         for (let i = 1; i < rows.length; i++) { 
@@ -69,9 +69,9 @@ window.MYNDO_DASHBOARD_START = {
         let row = table.row($(`button[id="${id}"]`).closest('tr'));
         let data = row.data(); 
 
-        let nuovoNome = prompt("Modifica il nome del report:", data["Nome report"]);
+        let nuovoNome = prompt("Edit report name:", data["Report name"]);
         if (nuovoNome !== null) {
-            data["Nome report"] = nuovoNome; 
+            data["Report name"] = nuovoNome; 
             row.data(data).draw(); 
         }
     },
@@ -92,7 +92,7 @@ window.MYNDO_DASHBOARD_START = {
 
         if (openable == true) {
             // Inserire dentro questo if le operazioni di apertura
-            alert("Visualizza dashboard");
+            alert("View dashboard");
         }
     },
 
@@ -148,17 +148,17 @@ window.MYNDO_DASHBOARD_START = {
 
         // Caricamento delle options nei filtri (Agenzia, Cliente, Brand)
         for (let dat of datas) {
-            if (dat["Agenzia"] && !agencySet.has(dat["Agenzia"])) {
-                agencySet.add(dat["Agenzia"]);
+            if (dat["Agency"] && !agencySet.has(dat["Agency"])) {
+                agencySet.add(dat["Agency"]);
                 let new_option = document.createElement('option');
-                new_option.innerHTML = dat["Agenzia"];
+                new_option.innerHTML = dat["Agency"];
                 agency_filter.appendChild(new_option);
             }
 
-            if (dat["Cliente"] && !clientSet.has(dat["Cliente"])) {
-                clientSet.add(dat["Cliente"]);
+            if (dat["Client"] && !clientSet.has(dat["Client"])) {
+                clientSet.add(dat["Client"]);
                 let new_option = document.createElement('option');
-                new_option.innerHTML = dat["Cliente"];
+                new_option.innerHTML = dat["Client"];
                 client_filter.appendChild(new_option);
             }
 
