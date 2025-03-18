@@ -159,7 +159,7 @@ window.MYNDO_DASHBOARD_START = {
 
         window.addEventListener('click', function(e) {
             if (!button_gen_dash.contains(e.target) && !screen_generate.contains(e.target)) {
-                screen_generate.style.display = "none";
+                window.MYNDO_DASHBOARD_START.close_new_dashboard(screen_generate);
             }
         })
 
