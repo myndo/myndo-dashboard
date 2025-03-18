@@ -69,6 +69,10 @@ window.MYNDO_DASHBOARD_START = {
         }
     },
 
+    view_dashboard_of_row : function() {
+        alert("View dashboard");
+    },
+
     init : function() {
         let button_gen_dash = document.getElementById('button_for_generate_dashboard');
         let screen_generate = document.getElementById('new_dashboard_gen');
@@ -225,6 +229,14 @@ window.MYNDO_DASHBOARD_START = {
         for (let delete_row of delete_rows) {
             delete_row.addEventListener('click', function() {
                 window.MYNDO_DASHBOARD_START.delete_rows_table(table, delete_row.id);
+            })
+        }
+
+        let rows_of_table = document.querySelectorAll('#report_table_for_dashboard > tbody > tr');
+
+        for (let row of rows_of_table) {
+            row.addEventListener('click', function() {
+                window.MYNDO_DASHBOARD_START.view_dashboard_of_row();
             })
         }
     }
