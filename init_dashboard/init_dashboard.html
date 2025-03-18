@@ -26,23 +26,23 @@
 
     <div class = "mid_part_dashboard_table space_margin_dash_table">
         <span class = "title_dashboard_table">Create your dashboard</span>
-        <span class = "subtitle_dashboard_table">Visualizza e gestisci i report esistenti o creane di nuovi</span>
+        <span class = "subtitle_dashboard_table">View and manage existing reports or create new ones</span>
     </div>
 
     <div class = "bottom_part_dashboard_table space_margin_dash_table">
         <div class = "upper_table_part_dash">
             <select id = "agency_filter">
-                <option selected disabled>Agenzia</option>
+                <option selected disabled>Agency</option>
             </select>
             <select id = "client_filter">
-                <option selected disabled>Cliente</option>
+                <option selected disabled>Client</option>
             </select>
             <select id = "brand_filter">
                 <option selected disabled>Brand</option>
             </select>
             <button class = "button_for_report_dash" id = "filter_for_table_dash">
                 <svg width = "17px" height = "17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 4.6C3 4.03995 3 3.75992 3.10899 3.54601C3.20487 3.35785 3.35785 3.20487 3.54601 3.10899C3.75992 3 4.03995 3 4.6 3H19.4C19.9601 3 20.2401 3 20.454 3.10899C20.6422 3.20487 20.7951 3.35785 20.891 3.54601C21 3.75992 21 4.03995 21 4.6V6.33726C21 6.58185 21 6.70414 20.9724 6.81923C20.9479 6.92127 20.9075 7.01881 20.8526 7.10828C20.7908 7.2092 20.7043 7.29568 20.5314 7.46863L14.4686 13.5314C14.2957 13.7043 14.2092 13.7908 14.1474 13.8917C14.0925 13.9812 14.0521 14.0787 14.0276 14.1808C14 14.2959 14 14.4182 14 14.6627V17L10 21V14.6627C10 14.4182 10 14.2959 9.97237 14.1808C9.94787 14.0787 9.90747 13.9812 9.85264 13.8917C9.7908 13.7908 9.70432 13.7043 9.53137 13.5314L3.46863 7.46863C3.29568 7.29568 3.2092 7.2092 3.14736 7.10828C3.09253 7.01881 3.05213 6.92127 3.02763 6.81923C3 6.70414 3 6.58185 3 6.33726V4.6Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                Filtra
+                Filter
             </button>
             <button class = "button_for_report_dash" id = "filter_for_table_dash_reset">
                 <svg width = "17px" height = "17px" fill="#fff" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M960 0v213.333c411.627 0 746.667 334.934 746.667 746.667S1371.627 1706.667 960 1706.667 213.333 1371.733 213.333 960c0-197.013 78.4-382.507 213.334-520.747v254.08H640V106.667H53.333V320h191.04C88.64 494.08 0 720.96 0 960c0 529.28 430.613 960 960 960s960-430.72 960-960S1489.387 0 960 0" fill-rule="evenodd"></path> </g></svg>
@@ -59,14 +59,14 @@
             <table id = "report_table_for_dashboard">
                 <thead>
                     <tr>
-                        <th>Agenzia</th>
-                        <th>Cliente</th>
+                        <th>Agency</th>
+                        <th>Client</th>
                         <th>Brand</th>
-                        <th>Nome report</th>
-                        <th>Investimento</th>
-                        <th>Tipo report</th>
-                        <th>Ultimo update</th>
-                        <th>Azioni</th>
+                        <th>Report name</th>
+                        <th>Investment</th>
+                        <th>Report type</th>
+                        <th>Last update</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -78,14 +78,14 @@
 
     <div class = "generate_new_dashboard" id = "new_dashboard_gen">
         <div class = "section_create_new_dashboard bottom_border_signed">
-            <span class = "title_dashboard_table">Crea nuovo report</span>
+            <span class = "title_dashboard_table">Create new report</span>
         </div>
         <div class = "section_create_new_dashboard">
-            <label for = "report_name">Nome report</label>
+            <label for = "report_name">Report name</label>
             <input type = "text" name = "report_name" placeholder = "Nome">
         </div>
         <div class = "section_create_new_dashboard">
-            <label for = "report_name">Cliente</label>
+            <label for = "report_name">Client</label>
             <select>
                 <option selected>Ecommerce</option>
                 <option>Performance</option>
@@ -99,7 +99,7 @@
             <input type = "date" placeholder="End date">
         </div>
         <details class = "section_create_new_dashboard section_multi_camp_dash">
-            <summary>Grafico torta</summary>
+            <summary>Pie chart</summary>
             <div class = "multi_line_select_dash">
                 <select>
                     <option selected>opzione 1</option>
@@ -112,7 +112,7 @@
             </div>
         </details>
         <details class="section_create_new_dashboard section_multi_camp_dash">
-            <summary>Grafico trend</summary>
+            <summary>Trend chart</summary>
             <div class="multi_line_select_dash">
                 <select>
                     <option selected>opzione 1</option>
@@ -133,7 +133,7 @@
             </div>
         </details>
         <details class = "section_create_new_dashboard section_multi_camp_dash">
-            <summary>Tabella</summary>
+            <summary>Table</summary>
             <div class = "multi_line_select_dash">
                 <select>
                     <option selected>opzione 1</option>
@@ -152,11 +152,11 @@
         <div class = "section_create_new_dashboard display_flex_section">
             <button class = "button_for_report_dash" id = "create_new_dashboard">
                 <svg width = "17px" height = "17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99999 1C8.99999 0.447715 8.55228 0 7.99999 0C7.44771 0 6.99999 0.447715 6.99999 1V1.5C6.99999 2.05228 7.44771 2.5 7.99999 2.5C8.55228 2.5 8.99999 2.05228 8.99999 1.5V1ZM3.7071 2.29289C3.31657 1.90237 2.68341 1.90237 2.29288 2.29289C1.90236 2.68342 1.90236 3.31658 2.29288 3.70711L3.29288 4.70711C3.68341 5.09763 4.31657 5.09763 4.7071 4.70711C5.09762 4.31658 5.09762 3.68342 4.7071 3.29289L3.7071 2.29289ZM13.7071 3.70711C14.0976 3.31658 14.0976 2.68342 13.7071 2.29289C13.3166 1.90237 12.6834 1.90237 12.2929 2.29289L11.2929 3.29289C10.9024 3.68342 10.9024 4.31658 11.2929 4.70711C11.6834 5.09763 12.3166 5.09763 12.7071 4.70711L13.7071 3.70711ZM1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9H1.5C2.05228 9 2.5 8.55228 2.5 8C2.5 7.44772 2.05228 7 1.5 7H1ZM15 7C14.4477 7 14 7.44772 14 8C14 8.55228 14.4477 9 15 9H15.5C16.0523 9 16.5 8.55228 16.5 8C16.5 7.44772 16.0523 7 15.5 7H15ZM4.70711 12.7071C5.09763 12.3166 5.09763 11.6834 4.70711 11.2929C4.31658 10.9024 3.68342 10.9024 3.29289 11.2929L2.29289 12.2929C1.90237 12.6834 1.90237 13.3166 2.29289 13.7071C2.68342 14.0976 3.31658 14.0976 3.70711 13.7071L4.70711 12.7071ZM9 15C9 14.4477 8.55228 14 8 14C7.44772 14 7 14.4477 7 15V15.5C7 16.0523 7.44772 16.5 8 16.5C8.55228 16.5 9 16.0523 9 15.5V15ZM9.41421 4.99998C8.63316 4.21894 7.36683 4.21894 6.58579 4.99998L5 6.58577C4.21895 7.36682 4.21895 8.63315 5 9.4142L7.29289 11.7071L18.5858 23C19.3668 23.781 20.6332 23.781 21.4142 23L23 21.4142C23.781 20.6331 23.781 19.3668 23 18.5858L11.7071 7.29288L9.41421 4.99998ZM6.41421 7.99998L8 6.4142L9.58579 7.99998L8 9.58577L6.41421 7.99998ZM9.41421 11L11 9.4142L21.5858 20L20 21.5858L9.41421 11Z" fill="#fff"></path> </g></svg>
-                Genera report
+                Generate report
             </button>
             <button class = "button_for_report_dash button_for_report_dash_red" id = "close_new_dashboard">
                 <svg width = "17px" height = "17px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 21.32L21 3.32001" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 3.32001L21 21.32" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                Chiudi
+                Close
             </button>
         </div>
     </div>

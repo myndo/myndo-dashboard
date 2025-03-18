@@ -113,36 +113,36 @@ window.MYNDO_DASHBOARD_START = {
         let datas = [
             {
                 "id": 1,
-                "Agenzia": "Agenzia A",
-                "Cliente": "Cliente X",
+                "Agency": "Agenzia A",
+                "Client": "Cliente X",
                 "Brand": "Brand 1",
-                "Nome report": "Report Q1 2024",
-                "Investimento": "€50.000",
-                "Tipo report": "Overall",
-                "Ultimo update": "01/03/2024",
-                "Azioni": ""
+                "Report name": "Report Q1 2024",
+                "Investment": "€50.000",
+                "Report type": "Overall",
+                "Last update": "01/03/2024",
+                "Actions": ""
             },
             {
                 "id": 2,
-                "Agenzia": "Agenzia B",
-                "Cliente": "Cliente Z",
+                "Agency": "Agenzia B",
+                "Client": "Cliente Z",
                 "Brand": "Brand 2",
-                "Nome report": "Report Q2 2024",
-                "Investimento": "€53.000",
-                "Tipo report": "Overall",
-                "Ultimo update": "01/03/2025",
-                "Azioni": ""
+                "Report name": "Report Q2 2024",
+                "Investment": "€53.000",
+                "Report type": "Overall",
+                "Last update": "01/03/2025",
+                "Actions": ""
             },
             {
                 "id": 3,
-                "Agenzia": "Agenzia C",
-                "Cliente": "Cliente Z",
+                "Agency": "Agenzia C",
+                "Client": "Cliente Z",
                 "Brand": "Brand 3",
-                "Nome report": "Report Q3 2024",
-                "Investimento": "€55.000",
-                "Tipo report": "Overall",
-                "Ultimo update": "01/03/2025",
-                "Azioni": ""
+                "Report name": "Report Q3 2024",
+                "Investment": "€55.000",
+                "Report type": "Overall",
+                "Last update": "01/03/2025",
+                "Actions": ""
             }
         ];
 
@@ -210,15 +210,15 @@ window.MYNDO_DASHBOARD_START = {
             select: true,
             data: datas,
             columns: [
-                {data: "Agenzia"},
-                {data: "Cliente"},
+                {data: "Agency"},
+                {data: "Client"},
                 {data: "Brand"},
-                {data: "Nome report"},
-                {data: "Investimento"},
-                {data: "Tipo report"},
-                {data: "Ultimo update"},
+                {data: "Report name"},
+                {data: "Investment"},
+                {data: "Report type"},
+                {data: "Last update"},
                 {
-                    data: 'Azioni',
+                    data: 'Actions',
                     orderable: false,
                     render: function (data, type, row) {
                         return `
