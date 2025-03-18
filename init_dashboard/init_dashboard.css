@@ -9,6 +9,7 @@
     --color-blue-dash: #0097B2;
     --color-white-dash: #fff;
     --box-shadow: rgba(0.1, 0.1, 0.1, 0.356);
+    --delete-camp: red;
 }
 
 .display_flex_section {
@@ -50,6 +51,46 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 2px;
+}
+
+.multi_line_select_dash {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
+}
+
+.multi_line_select_dash > select, .multi_line_select_dash input {
+    width: calc(100% / 2.1);
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    color: var(--color-subtitle-dash);
+    border: 1px solid var(--color-subtitle-dash);
+    background: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.4s;
+}
+
+.multi_line_select_dash > select:focus, .multi_line_select_dash > input:focus {
+    border: 1px solid var(--color-blue-dash);
+    color: var(--color-title-dash);
+}
+
+.multi_line_select_dash > select:hover, .multi_line_select_dash > input:hover {
+    border: 1px solid var(--color-blue-dash);
+    color: var(--color-title-dash);
+}
+
+.section_multi_camp_dash {
+    flex-wrap: wrap;
+}
+
+.section_multi_camp_dash > select {
+    max-width: 48%;
 }
 
 .bottom_border_signed {
@@ -110,6 +151,22 @@
     font-size: 14px !important;
     font-weight: 400 !important;
     color: var(--color-title-dash);
+}
+
+#report_table_for_dashboard > tbody > tr {
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#report_table_for_dashboard > tbody > tr:hover {
+    background: rgb(226, 226, 226);
+}
+
+.action_column_for_table {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
 }
 
 #report_table_for_dashboard_filter {
@@ -220,4 +277,16 @@
     width: 150px;
     display: flex;
     color: var(--color-white-dash);
+}
+
+.button_for_report_dash_red {
+    color: var(--delete-camp) !important;
+    background: var(--delete-camp) !important;
+    border: 1px solid var(--delete-camp) !important;
+}
+
+.button_for_report_dash_red:hover {
+    color: var(--color-white-dash) !important;
+    background: var(--delete-camp) !important;
+    border: 1px solid var(--delete-camp) !important;
 }
