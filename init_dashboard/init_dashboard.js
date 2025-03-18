@@ -1,18 +1,22 @@
 window.MYNDO_DASHBOARD_START = {
     open_generate_dashboard : function(screen_generate) {
+        // Serve per aprire il pop-up per la generazione di una nuova dasboard
         screen_generate.style.display = "flex";
     },
 
     create_new_dashboard : function(screen_generate) {
+        // Serve per generare la nuova dashboard
         screen_generate.style.display = "none";
         alert("Nuova dashboard generata correttamente!");
     },
 
     close_new_dashboard : function(screen_generate) {
+        // Serve per chiudere il pop-up per la generazione di una nuova dashboard
         screen_generate.style.display = "none";
     },
 
     filters_data_table : function(agency_filter, client_filter, brand_filter) {
+        // Serve per i tre filtri in alto che interagiscono con la tabella (Agenzia, Cliente, Brand)
         let table = document.getElementById("report_table_for_dashboard");	
         let rows = table.getElementsByTagName("tr"); 
 
@@ -41,6 +45,7 @@ window.MYNDO_DASHBOARD_START = {
     },
 
     reset_filters_data_table : function(agency_filter, client_filter, brand_filter) {
+        // Serve per resettare i filtri (Agenzia, Cliente, Brand) e ricaricare tutte le voci della tabella
         let table = document.getElementById("report_table_for_dashboard");	
         let rows = table.getElementsByTagName("tr"); 
 
@@ -54,11 +59,13 @@ window.MYNDO_DASHBOARD_START = {
     },
 
     delete_rows_table : function(table, id) {
+        // Serve per eliminare le righe dalla tabella (Con il bottone rosso delle righe)
         let row = table.row($(`button[id="${id}"]`).closest('tr'));
         row.remove().draw(); 
     },
 
     edit_rows_table : function(table, id) {
+        // Serve per modificare le righe della tabella (Con il bottone della matitina delle righe)
         let row = table.row($(`button[id="${id}"]`).closest('tr'));
         let data = row.data(); 
 
@@ -69,8 +76,24 @@ window.MYNDO_DASHBOARD_START = {
         }
     },
 
-    view_dashboard_of_row : function() {
-        alert("View dashboard");
+    view_dashboard_of_row : function(edit_rows, delete_rows, event) {
+        // Serve per vedere le dashboard delle righe, funziona al click sulle righe della tabella
+        let openable = true;
+        for (let edit of edit_rows) {
+            if (edit.contains(event.target)) {
+                openable = false;
+            }
+        }
+        for (let del of delete_rows) {
+            if (del.contains(event.target)) {
+                openable = false;
+            }
+        }
+
+        if (openable == true) {
+            // Inserire dentro questo if le operazioni di apertura
+            alert("Visualizza dashboard");
+        }
     },
 
     init : function() {
@@ -86,6 +109,7 @@ window.MYNDO_DASHBOARD_START = {
         let agencySet = new Set();
         let clientSet = new Set();
         let brandSet = new Set();
+        // Dashboard nell'array di oggetti (righe della tabella)
         let datas = [
             {
                 "id": 1,
@@ -122,6 +146,7 @@ window.MYNDO_DASHBOARD_START = {
             }
         ];
 
+        // Caricamento delle options nei filtri (Agenzia, Cliente, Brand)
         for (let dat of datas) {
             if (dat["Agenzia"] && !agencySet.has(dat["Agenzia"])) {
                 agencySet.add(dat["Agenzia"]);
@@ -145,32 +170,39 @@ window.MYNDO_DASHBOARD_START = {
             }
         }
 
+        // Evento al click del bottone "Filtra"
         button_filter.addEventListener('click', function() {
             window.MYNDO_DASHBOARD_START.filters_data_table(agency_filter, client_filter, brand_filter);
         })
 
+        // Evento al click del bottone "Reset Filter"
         reset_filter_button.addEventListener('click', function() {
             window.MYNDO_DASHBOARD_START.reset_filters_data_table(agency_filter, client_filter, brand_filter);
         })
 
+        // Evento al click del bottone "Chiudi" per la creazione di una nuova dashboard
         button_close_new_dashboard.addEventListener('click', function() {
             window.MYNDO_DASHBOARD_START.close_new_dashboard(screen_generate);
         })
         
+        // Evento al click del bottone "Genera report" per l'apertura del pop-up
         button_gen_dash.addEventListener('click', function() {
             window.MYNDO_DASHBOARD_START.open_generate_dashboard(screen_generate);
         })
 
+        // Evento al click sulla finestra in generale (Serve per far chiudere il pop-up al click esterno)
         window.addEventListener('click', function(e) {
             if (!button_gen_dash.contains(e.target) && !screen_generate.contains(e.target)) {
                 window.MYNDO_DASHBOARD_START.close_new_dashboard(screen_generate);
             }
         })
 
+        // Evento al click del bottone "Genera report" (Servirebbe per creare la nuova dashboard)
         button_create_new_dashboard.addEventListener('click', function() {
             window.MYNDO_DASHBOARD_START.create_new_dashboard(screen_generate);
         })
 
+        // Creazione della tabella
         let table = new DataTable('#report_table_for_dashboard', {
             paging: true,
             pageLength: 10,
@@ -206,6 +238,7 @@ window.MYNDO_DASHBOARD_START = {
             ]
         });
 
+        // Sposto il pulsante di search in un div esterno al caricamento della pagina ed elimino la scritta "Search..."
         document.addEventListener('DOMContentLoaded', function () {
             let screen_buttons = document.getElementById('attachment_buttons_table');
             let search_filter = document.getElementById('report_table_for_dashboard_filter');
@@ -220,12 +253,14 @@ window.MYNDO_DASHBOARD_START = {
         let edit_rows = document.querySelectorAll('.edit_line_table_td');
         let delete_rows = document.querySelectorAll('.delete_line_table_td');
 
+        // Evento al click del pulsante di edit delle righe
         for (let edit_row of edit_rows) {
             edit_row.addEventListener('click', function() {
                 window.MYNDO_DASHBOARD_START.edit_rows_table(table, edit_row.id);
             })
         }
 
+        // Evento al click del pulsante di delete delle righe
         for (let delete_row of delete_rows) {
             delete_row.addEventListener('click', function() {
                 window.MYNDO_DASHBOARD_START.delete_rows_table(table, delete_row.id);
@@ -234,9 +269,10 @@ window.MYNDO_DASHBOARD_START = {
 
         let rows_of_table = document.querySelectorAll('#report_table_for_dashboard > tbody > tr');
 
+        // Evento al click delle righe
         for (let row of rows_of_table) {
-            row.addEventListener('click', function() {
-                window.MYNDO_DASHBOARD_START.view_dashboard_of_row();
+            row.addEventListener('click', function(event) {
+                window.MYNDO_DASHBOARD_START.view_dashboard_of_row(edit_rows, delete_rows, event);
             })
         }
     }
