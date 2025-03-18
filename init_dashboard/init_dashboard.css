@@ -1,4 +1,4 @@
-#myndo-dashboard  .header-main-box{
+#myndo-dashboard-init  .header-main-box{
     background: linear-gradient(90deg, #0097B2 0%, var(--myndo-color-4) 100%);
     box-shadow: 16px 0px 21.8px -5px rgba(0, 0, 0, 0.02);
 }
