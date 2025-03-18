@@ -31,6 +31,7 @@
     background: none;
     font-size: 14px;
     font-weight: 400;
+    margin-bottom: 5px;
     transition: 0.4s;
 }
 
@@ -45,13 +46,16 @@
 }
 
 .section_create_new_dashboard {
-    padding-bottom: 10px;
     width: 100%;
     display: block;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     gap: 2px;
+}
+
+.bottom_part_dashboard_table {
+    position: relative;
 }
 
 .multi_line_select_dash {
@@ -122,7 +126,6 @@
     flex-direction: row-reverse;
     gap: 10px;
     padding-bottom: 15px;
-    padding-top: 15px;
 }
 
 #report_table_for_dashboard_paginate  > * {
@@ -223,6 +226,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    padding-left: 40px !important;
 }
 
 .upper_table_part_dash {
@@ -231,6 +235,19 @@
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.bottom_part_dashboard_table  {
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    width: auto;
+    background: var(--color-white-dash);
+    border-radius: 4px;
 }
 
 .upper_table_part_dash > select {
