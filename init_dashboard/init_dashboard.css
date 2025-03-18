@@ -7,6 +7,7 @@
     --color-title-dash: rgb(59, 59, 59);
     --color-subtitle-dash: #c1c1c1;
     --color-blue-dash: #0097B2;
+    --color-dark-blue-dash: #008299;
     --color-white-dash: #fff;
     --box-shadow: rgba(0.1, 0.1, 0.1, 0.356);
     --delete-camp: red;
@@ -29,7 +30,7 @@
     color: var(--color-subtitle-dash);
     border: 1px solid var(--color-subtitle-dash);
     background: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     margin-bottom: 5px;
     transition: 0.4s;
@@ -75,7 +76,7 @@
     color: var(--color-subtitle-dash);
     border: 1px solid var(--color-subtitle-dash);
     background: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     transition: 0.4s;
 }
@@ -129,7 +130,7 @@
 }
 
 #report_table_for_dashboard_paginate  > * {
-    font-size: 14px !important;
+    font-size: 12px !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
@@ -146,13 +147,13 @@
 }
 
 #report_table_for_dashboard > thead > tr > th {
-    font-size: 16px !important;
+    font-size: 12px !important;
     font-weight: 600 !important;
     color: var(--color-title-dash);
 }
 
 #report_table_for_dashboard > tbody > tr > td {
-    font-size: 14px !important;
+    font-size: 12px !important;
     font-weight: 400 !important;
     color: var(--color-title-dash);
 }
@@ -180,11 +181,11 @@
 #report_table_for_dashboard_filter > label {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
 }
 
 #report_table_for_dashboard_filter > label > input {
-    font-size: 14px !important;
+    font-size: 12px !important;
     padding: 5px !important;
     padding-left: 5px !important;
     border-radius: 4px !important;
@@ -197,13 +198,13 @@
 }
 
 .title_dashboard_table {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--color-title-dash);
 }
 
 .subtitle_dashboard_table {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
     color: var(--color-subtitle-dash);
 }
@@ -252,12 +253,12 @@
 
 .upper_table_part_dash > select {
     padding: 5px;
-    width: 150px;
+    width: 130px;
     border-radius: 4px;
     border: 1px solid var(--color-subtitle-dash);
     color: var(--color-subtitle-dash);
     background: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     transition: 0.4s;
 }
@@ -283,7 +284,7 @@
     border: 1px solid var(--color-blue-dash);
     background: var(--color-blue-dash);
     color: var(--color-blue-dash);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     border-radius: 4px;
     transition: 0.4s;
@@ -292,9 +293,21 @@
 }
 
 .button_for_report_dash:hover {
-    width: 150px;
+    width: 130px;
     display: flex;
     color: var(--color-white-dash);
+}
+
+.already_open_button_dashboard {
+    width: 130px !important;
+    color: var(--color-white-dash) !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+
+.already_open_button_dashboard:hover {
+    background: var(--color-dark-blue-dash);
 }
 
 .button_for_report_dash_red {
