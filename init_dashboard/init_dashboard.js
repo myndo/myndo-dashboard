@@ -204,6 +204,7 @@ window.MYNDO_DASHBOARD_START = {
 
         // Creazione della tabella
         let table = new DataTable('#report_table_for_dashboard', {
+            searching: true,
             paging: true,
             pageLength: 10,
             order: [[0, "asc"]],
